@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Registro de Cambios | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://gorm.io/es_ES/docs/changelog.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <meta name="generator" content="Hexo 3.8.0">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="GORM">
+  <!-- Open Graph -->
+  <meta name="description" content="v2.0Trabajo en curso v1.0 - 2016.04.27Cambios que rompen funcionalidad anterior  gorm.Open return type *gorm.DB en vez de gorm.DB  El método Updating sólo actualizará los campos modificados  Los Soft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Registro de Cambios">
+<meta property="og:url" content="http://gorm.io/es_ES/docs/changelog.html">
+<meta property="og:site_name" content="GORM">
+<meta property="og:description" content="v2.0Trabajo en curso v1.0 - 2016.04.27Cambios que rompen funcionalidad anterior  gorm.Open return type *gorm.DB en vez de gorm.DB  El método Updating sólo actualizará los campos modificados  Los Soft">
+<meta property="og:locale" content="es_ES">
+<meta property="og:updated_time" content="2019-11-07T06:22:36.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Registro de Cambios">
+<meta name="twitter:description" content="v2.0Trabajo en curso v1.0 - 2016.04.27Cambios que rompen funcionalidad anterior  gorm.Open return type *gorm.DB en vez de gorm.DB  El método Updating sólo actualizará los campos modificados  Los Soft">
+<meta name="twitter:site" content="zhangjinzhu">
+  <!-- Google Tag Manager -->
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSNPD75');</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/es_ES/" id="logo">GORM</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/es_ES/docs/" class="main-nav-link"><i class="fa fa-book"></i>Documentos</a><a href="/es_ES/community.html" class="main-nav-link"><i class="fa fa-slack"></i>Comunidad</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/es_ES/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribuir</a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Buscar documentos...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>Español</span></label>
+      <select id="lang-select" data-canonical="docs/changelog.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh_CN">简体中文</option>
+        
+          <option value="de_DE">Deutsch</option>
+        
+          <option value="es_ES" selected>Español</option>
+        
+          <option value="id_ID">bahasa Indonesia</option>
+        
+          <option value="it_IT">Italiano</option>
+        
+          <option value="ja_JP">日本語</option>
+        
+          <option value="ru_RU">Русский</option>
+        
+          <option value="fr_FR">French</option>
+        
+          <option value="pt_BR">Brazilian Portuguese</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Registro de Cambios</h1>
+                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/es_ES/docs/changelog.md" class="article-edit-link" title="Mejorar este documento"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="v2-0" class="article-heading"><a href="#v2-0" class="headerlink" title="v2.0"></a>v2.0<a class="article-anchor" href="#v2-0" aria-hidden="true"></a></h2><p>Trabajo en curso</p>
+<h2 id="v1-0-2016-04-27" class="article-heading"><a href="#v1-0-2016-04-27" class="headerlink" title="v1.0 - 2016.04.27"></a>v1.0 - 2016.04.27<a class="article-anchor" href="#v1-0-2016-04-27" aria-hidden="true"></a></h2><p>Cambios que rompen funcionalidad anterior</p>
+<ul>
+<li><p><code>gorm.Open</code> return type <code>*gorm.DB</code> en vez de <code>gorm.DB</code></p>
+</li>
+<li><p>El método Updating sólo actualizará los campos modificados</p>
+</li>
+<li><p>Los Soft Delete solo verificarán <code>deleted_at IS NULL</code></p>
+</li>
+<li><p>New ToDBName logic</p>
+<p>  When GORM convert struct, field name to db name, only common initialisms from <a href="https://github.com/golang/lint/blob/master/lint.go#L702" target="_blank" rel="noopener">golint</a> like <code>HTTP</code>, <code>URI</code> were handled, so <code>HTTP</code>‘s db name is <code>http</code>, but not <code>h_t_t_p</code>.</p>
+<p>  But for some other initialisms not in the list, like <code>SKU</code>, it’s db name was <code>s_k_u</code>, this change fixed it.</p>
+</li>
+<li><p>Error <code>RecordNotFound</code> has been renamed to <code>ErrRecordNotFound</code></p>
+</li>
+<li><p><code>mssql</code> dialect has been renamed to “github.com/jinzhu/gorm/dialects/mssql”</p>
+</li>
+<li><p><code>Hstore</code> has been moved to package “github.com/jinzhu/gorm/dialects/postgres”</p>
+</li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-07T06:22:36.078Z" itemprop="dateModified">Última actualización: 2019-11-07</time>
+<a href="logger.html" class="article-footer-prev" title="Logger"><i class="fa fa-chevron-left"></i><span>Anterior</span></a><a href="/community.html" class="article-footer-next" title="Comunidad"><span>Siguiente</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+<div id="disqus_thread"></div>
+
+
+<script>
+var disqus_config = function () {
+this.page.url = 'http://gorm.io/es_ES/docs/changelog.html';
+this.page.identifier = 'http://gorm.io/es_ES/docs/changelog.html';
+this.language = 'es';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gorm.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+</section>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
+              <strong class="sidebar-title">Contenidos</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#v2-0"><span class="toc-text">v2.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v1-0-2016-04-27"><span class="toc-text">v1.0 - 2016.04.27</span></a></li></ol>
+              <a href="#" id="article-toc-top">Volver al principio</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Empezando</strong><a href="index.html" class="sidebar-link">Información General</a><a href="models.html" class="sidebar-link">Declarando Modelos</a><a href="conventions.html" class="sidebar-link">Convenciones</a><a href="connecting_to_the_database.html" class="sidebar-link">Conectando a Base de Datos</a><strong class="sidebar-title">CRUD Interface</strong><a href="create.html" class="sidebar-link">Crear</a><a href="query.html" class="sidebar-link">Query</a><a href="update.html" class="sidebar-link">Actualizar</a><a href="delete.html" class="sidebar-link">Eliminar</a><strong class="sidebar-title">Asociaciones</strong><a href="belongs_to.html" class="sidebar-link">Pertenece A</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Asociaciones</a><a href="preload.html" class="sidebar-link">Preloading (Eager Loading)</a><strong class="sidebar-title">Tutoriales</strong><a href="method_chaining.html" class="sidebar-link">Method Chaining</a><a href="error_handling.html" class="sidebar-link">Manejo de Errores</a><a href="hooks.html" class="sidebar-link">Ganchos</a><a href="transactions.html" class="sidebar-link">Transacciones</a><a href="migration.html" class="sidebar-link">Migración</a><a href="sql_builder.html" class="sidebar-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Interfaz de base de datos genérica</a><strong class="sidebar-title">Tópicos Avanzados</strong><a href="composite_primary_key.html" class="sidebar-link">Composite Primary Key</a><a href="write_plugins.html" class="sidebar-link">Write Plugins</a><a href="dialects.html" class="sidebar-link">GORM Dialects</a><a href="logger.html" class="sidebar-link">Logger</a><a href="changelog.html" class="sidebar-link current">ChangeLog</a><a href="/community.html" class="sidebar-link">Comunidad</a><a href="/contribute.html" class="sidebar-link">Contribuir</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Traducir sitio actual</a>
+  </div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2013~2019 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
+      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Inicio</a>
+      </li>
+      <a href="/es_ES/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Documentos</a><a href="/es_ES/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>Comunidad</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/es_ES/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribuir</a>
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>Español</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/changelog.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh_CN">简体中文</option>
+      
+        <option value="de_DE">Deutsch</option>
+      
+        <option value="es_ES" selected>Español</option>
+      
+        <option value="id_ID">bahasa Indonesia</option>
+      
+        <option value="it_IT">Italiano</option>
+      
+        <option value="ja_JP">日本語</option>
+      
+        <option value="ru_RU">Русский</option>
+      
+        <option value="fr_FR">French</option>
+      
+        <option value="pt_BR">Brazilian Portuguese</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="/js/code_expander.js"></script>
+<script src="/js/404_fix.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSNPD75" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+</html>

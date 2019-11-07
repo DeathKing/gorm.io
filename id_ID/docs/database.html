@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id_ID">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Menghubungkan ke basis data | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://gorm.io/id_ID/docs/database.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="http://gorm.io/docs/database.html">
+    
+      <link rel="alternative" hreflang="zh_CN" href="http://gorm.io/zh_CN/docs/database.html">
+    
+      <link rel="alternative" hreflang="de_DE" href="http://gorm.io/de_DE/docs/database.html">
+    
+      <link rel="alternative" hreflang="es_ES" href="http://gorm.io/es_ES/docs/database.html">
+    
+      <link rel="alternative" hreflang="id_ID" href="http://gorm.io/id_ID/docs/database.html">
+    
+      <link rel="alternative" hreflang="it_IT" href="http://gorm.io/it_IT/docs/database.html">
+    
+      <link rel="alternative" hreflang="ja_JP" href="http://gorm.io/ja_JP/docs/database.html">
+    
+      <link rel="alternative" hreflang="ru_RU" href="http://gorm.io/ru_RU/docs/database.html">
+    
+      <link rel="alternative" hreflang="fr_FR" href="http://gorm.io/fr_FR/docs/database.html">
+    
+      <link rel="alternative" hreflang="pt_BR" href="http://gorm.io/pt_BR/docs/database.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <meta name="generator" content="Hexo 3.8.0">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="GORM">
+  <!-- Open Graph -->
+  <meta name="description" content="Menghubungkan ke basisdataAgar bisa terhubung ke database, anda perlu mengimpor driver database terlebih dahulu. Sebagai contoh: import _ &quot;github.com/go-sql-driver/mysql&quot; GORM sudah termasuk beberapa">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Menghubungkan ke basis data">
+<meta property="og:url" content="http://gorm.io/id_ID/docs/database.html">
+<meta property="og:site_name" content="GORM">
+<meta property="og:description" content="Menghubungkan ke basisdataAgar bisa terhubung ke database, anda perlu mengimpor driver database terlebih dahulu. Sebagai contoh: import _ &quot;github.com/go-sql-driver/mysql&quot; GORM sudah termasuk beberapa">
+<meta property="og:locale" content="id_ID">
+<meta property="og:updated_time" content="2019-11-07T06:22:36.083Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Menghubungkan ke basis data">
+<meta name="twitter:description" content="Menghubungkan ke basisdataAgar bisa terhubung ke database, anda perlu mengimpor driver database terlebih dahulu. Sebagai contoh: import _ &quot;github.com/go-sql-driver/mysql&quot; GORM sudah termasuk beberapa">
+<meta name="twitter:site" content="zhangjinzhu">
+  <!-- Google Tag Manager -->
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSNPD75');</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/id_ID/" id="logo">GORM</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/id_ID/docs/" class="main-nav-link"><i class="fa fa-book"></i>Docs</a><a href="/id_ID/community.html" class="main-nav-link"><i class="fa fa-slack"></i>Community</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/id_ID/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Mencari dokumen...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>bahasa Indonesia</span></label>
+      <select id="lang-select" data-canonical="docs/database.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh_CN">简体中文</option>
+        
+          <option value="de_DE">Deutsch</option>
+        
+          <option value="es_ES">Español</option>
+        
+          <option value="id_ID" selected>bahasa Indonesia</option>
+        
+          <option value="it_IT">Italiano</option>
+        
+          <option value="ja_JP">日本語</option>
+        
+          <option value="ru_RU">Русский</option>
+        
+          <option value="fr_FR">French</option>
+        
+          <option value="pt_BR">Brazilian Portuguese</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Menghubungkan ke basis data</h1>
+                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/id_ID/docs/database.md" class="article-edit-link" title="Memperbaiki dokumen ini"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h1 id="Menghubungkan-ke-basisdata" class="article-heading"><a href="#Menghubungkan-ke-basisdata" class="headerlink" title="Menghubungkan ke basisdata"></a>Menghubungkan ke basisdata<a class="article-anchor" href="#Menghubungkan-ke-basisdata" aria-hidden="true"></a></h1><p>Agar bisa terhubung ke database, anda perlu mengimpor driver database terlebih dahulu. Sebagai contoh:</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="string">"github.com/go-sql-driver/mysql"</span></span><br></pre></td></tr></table></figure>
+<p>GORM sudah termasuk beberapa driver, untuk mempermudah mengingat jalur impor mereka, sehingga anda bisa mengimpor driver mysql dengan:</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="string">"github.com/jinzhu/gorm/dialects/mysql"</span></span><br><span class="line"><span class="comment">// import _ "github.com/jinzhu/gorm/dialects/postgres"</span></span><br><span class="line"><span class="comment">// import _ "github.com/jinzhu/gorm/dialects/sqlite"</span></span><br><span class="line"><span class="comment">// import _ "github.com/jinzhu/gorm/dialects/mssql"</span></span><br></pre></td></tr></table></figure>
+<h2 id="MySQL" class="article-heading"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL<a class="article-anchor" href="#MySQL" aria-hidden="true"></a></h2><p><strong>CATATAN:</strong>Untuk menggunakan <code>time.Time</code> secara benar, anda harus menyisipkan <code>parseTime</code> sebagai sebuah parameter. (<a href="https://github.com/go-sql-driver/mysql#parameters" target="_blank" rel="noopener">Lihat parameter yang di dukung</a>)</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"github.com/jinzhu/gorm"</span></span><br><span class="line">    _ <span class="string">"github.com/jinzhu/gorm/dialects/mysql"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  db, err := gorm.Open(<span class="string">"mysql"</span>, <span class="string">"user:password@/dbname?charset=utf8&amp;parseTime=True&amp;loc=Local"</span>)</span><br><span class="line">  <span class="keyword">defer</span> db.Close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="PostgreSQL" class="article-heading"><a href="#PostgreSQL" class="headerlink" title="PostgreSQL"></a>PostgreSQL<a class="article-anchor" href="#PostgreSQL" aria-hidden="true"></a></h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"github.com/jinzhu/gorm"</span></span><br><span class="line">    _ <span class="string">"github.com/jinzhu/gorm/dialects/postgres"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  db, err := gorm.Open(<span class="string">"postgres"</span>, <span class="string">"host=myhost port=myport user=gorm dbname=gorm password=mypassword"</span>)</span><br><span class="line">  <span class="keyword">defer</span> db.Close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Sqlite3" class="article-heading"><a href="#Sqlite3" class="headerlink" title="Sqlite3"></a>Sqlite3<a class="article-anchor" href="#Sqlite3" aria-hidden="true"></a></h2><p><strong>CATATAN:</strong> Anda dapat menggunakan <code>:memory:</code> untuk koneksinya, yang hal itu sqlite akan menggunakan sistem memory yang sementara. Ini sangat berguna untuk membuat program test aplikasi GORM punya anda.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"github.com/jinzhu/gorm"</span></span><br><span class="line">    _ <span class="string">"github.com/jinzhu/gorm/dialects/sqlite"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  db, err := gorm.Open(<span class="string">"sqlite3"</span>, <span class="string">"/tmp/gorm.db"</span>)</span><br><span class="line">  <span class="keyword">defer</span> db.Close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Server-SQL" class="article-heading"><a href="#Server-SQL" class="headerlink" title="Server SQL"></a>Server SQL<a class="article-anchor" href="#Server-SQL" aria-hidden="true"></a></h2><p><a href="https://www.microsoft.com/en-us/sql-server/developer-get-started/go" target="_blank" rel="noopener">Get started with SQL Server</a>, dapat perjalan di <a href="https://sqlchoice.azurewebsites.net/en-us/sql-server/developer-get-started/go/mac/" target="_blank" rel="noopener">Mac</a>, <a href="https://sqlchoice.azurewebsites.net/en-us/sql-server/developer-get-started/go/ubuntu/" target="_blank" rel="noopener">Linux</a> menggunakan Docker</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"github.com/jinzhu/gorm"</span></span><br><span class="line">    _ <span class="string">"github.com/jinzhu/gorm/dialects/mssql"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  db, err = gorm.Open(<span class="string">"mssql"</span>, <span class="string">"sqlserver://username:password@localhost:1433?database=dbname"</span>)</span><br><span class="line">  <span class="keyword">defer</span> db.Close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Tulis-Dialek-untuk-basis-data-yang-tidak-didukung" class="article-heading"><a href="#Tulis-Dialek-untuk-basis-data-yang-tidak-didukung" class="headerlink" title="Tulis Dialek untuk basis data yang tidak didukung"></a>Tulis Dialek untuk basis data yang tidak didukung<a class="article-anchor" href="#Tulis-Dialek-untuk-basis-data-yang-tidak-didukung" aria-hidden="true"></a></h2><p>GORM secara resmi mendukung database di atas, tapi anda bisa menulis dialek untuk database yang tidak didukung.</p>
+<p>Untuk menulis dialek anda sendiri, lihat: <a href="https://github.com/jinzhu/gorm/blob/master/dialect.go" target="_blank" rel="noopener">https://github.com/jinzhu/gorm/blob/master/dialect.go</a></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-07T06:22:36.083Z" itemprop="dateModified">Terakhir diperbarui: 2019-11-07</time>
+<a href="index.html" class="article-footer-next" title="Ikhtisar"><span>Selanjutnya</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+<div id="disqus_thread"></div>
+
+
+<script>
+var disqus_config = function () {
+this.page.url = 'http://gorm.io/id_ID/docs/database.html';
+this.page.identifier = 'http://gorm.io/id_ID/docs/database.html';
+this.language = 'id';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gorm.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+</section>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
+              <strong class="sidebar-title">Konten</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Menghubungkan-ke-basisdata"><span class="toc-text">Menghubungkan ke basisdata</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL"><span class="toc-text">MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PostgreSQL"><span class="toc-text">PostgreSQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sqlite3"><span class="toc-text">Sqlite3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Server-SQL"><span class="toc-text">Server SQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tulis-Dialek-untuk-basis-data-yang-tidak-didukung"><span class="toc-text">Tulis Dialek untuk basis data yang tidak didukung</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Kembali ke Atas</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Memulai</strong><a href="index.html" class="sidebar-link">Ikhtisar</a><a href="models.html" class="sidebar-link">Mendeklarasikan Model</a><a href="conventions.html" class="sidebar-link">Konvensi</a><a href="connecting_to_the_database.html" class="sidebar-link">Menghubungkan ke Basis Data</a><strong class="sidebar-title">Antarmuka CRUD</strong><a href="create.html" class="sidebar-link">Buat</a><a href="query.html" class="sidebar-link">Kueri</a><a href="update.html" class="sidebar-link">Perbarui</a><a href="delete.html" class="sidebar-link">Hapus</a><strong class="sidebar-title">Asosiasi</strong><a href="belongs_to.html" class="sidebar-link">Milik</a><a href="has_one.html" class="sidebar-link">Memiliki satu</a><a href="has_many.html" class="sidebar-link">Memiliki banyak</a><a href="many_to_many.html" class="sidebar-link">Banyak ke banyak</a><a href="associations.html" class="sidebar-link">Asosiasi</a><a href="preload.html" class="sidebar-link">Pramuat (Loading Eager)</a><strong class="sidebar-title">Tutorial</strong><a href="method_chaining.html" class="sidebar-link">Metode Rantai</a><a href="error_handling.html" class="sidebar-link">Penanganan Kesalahan</a><a href="hooks.html" class="sidebar-link">Kaitan</a><a href="transactions.html" class="sidebar-link">Transaksi</a><a href="migration.html" class="sidebar-link">Migrasi</a><a href="sql_builder.html" class="sidebar-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Antarmuka Database Generik</a><strong class="sidebar-title">Topik Lanjutan</strong><a href="composite_primary_key.html" class="sidebar-link">Kunci Utama Komposit</a><a href="write_plugins.html" class="sidebar-link">Tulis Plugin</a><a href="dialects.html" class="sidebar-link">GORM Dialects</a><a href="logger.html" class="sidebar-link">Logger</a><a href="changelog.html" class="sidebar-link">ChangeLog</a><a href="/community.html" class="sidebar-link">Komunitas</a><a href="/contribute.html" class="sidebar-link">Menyumbangkan</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Terjemahkan situs yang sekarang</a>
+  </div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2013~2019 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
+      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Home</a>
+      </li>
+      <a href="/id_ID/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Docs</a><a href="/id_ID/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>Community</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/id_ID/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
+    </ul>
+    
+      <strong class="mobile-nav-title">Memulai</strong><a href="index.html" class="mobile-nav-link">Ikhtisar</a><a href="models.html" class="mobile-nav-link">Mendeklarasikan Model</a><a href="conventions.html" class="mobile-nav-link">Konvensi</a><a href="connecting_to_the_database.html" class="mobile-nav-link">Menghubungkan ke Basis Data</a><strong class="mobile-nav-title">Antarmuka CRUD</strong><a href="create.html" class="mobile-nav-link">Buat</a><a href="query.html" class="mobile-nav-link">Kueri</a><a href="update.html" class="mobile-nav-link">Perbarui</a><a href="delete.html" class="mobile-nav-link">Hapus</a><strong class="mobile-nav-title">Asosiasi</strong><a href="belongs_to.html" class="mobile-nav-link">Milik</a><a href="has_one.html" class="mobile-nav-link">Memiliki satu</a><a href="has_many.html" class="mobile-nav-link">Memiliki banyak</a><a href="many_to_many.html" class="mobile-nav-link">Banyak ke banyak</a><a href="associations.html" class="mobile-nav-link">Asosiasi</a><a href="preload.html" class="mobile-nav-link">Pramuat (Loading Eager)</a><strong class="mobile-nav-title">Tutorial</strong><a href="method_chaining.html" class="mobile-nav-link">Metode Rantai</a><a href="error_handling.html" class="mobile-nav-link">Penanganan Kesalahan</a><a href="hooks.html" class="mobile-nav-link">Kaitan</a><a href="transactions.html" class="mobile-nav-link">Transaksi</a><a href="migration.html" class="mobile-nav-link">Migrasi</a><a href="sql_builder.html" class="mobile-nav-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="mobile-nav-link">Antarmuka Database Generik</a><strong class="mobile-nav-title">Topik Lanjutan</strong><a href="composite_primary_key.html" class="mobile-nav-link">Kunci Utama Komposit</a><a href="write_plugins.html" class="mobile-nav-link">Tulis Plugin</a><a href="dialects.html" class="mobile-nav-link">GORM Dialects</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="changelog.html" class="mobile-nav-link">ChangeLog</a><a href="/community.html" class="mobile-nav-link">Komunitas</a><a href="/contribute.html" class="mobile-nav-link">Menyumbangkan</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">Terjemahkan situs yang sekarang</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>bahasa Indonesia</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/database.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh_CN">简体中文</option>
+      
+        <option value="de_DE">Deutsch</option>
+      
+        <option value="es_ES">Español</option>
+      
+        <option value="id_ID" selected>bahasa Indonesia</option>
+      
+        <option value="it_IT">Italiano</option>
+      
+        <option value="ja_JP">日本語</option>
+      
+        <option value="ru_RU">Русский</option>
+      
+        <option value="fr_FR">French</option>
+      
+        <option value="pt_BR">Brazilian Portuguese</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="/js/code_expander.js"></script>
+<script src="/js/404_fix.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSNPD75" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+</html>

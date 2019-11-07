@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Conventions | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://gorm.io/es_ES/docs/conventions.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="http://gorm.io/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="zh_CN" href="http://gorm.io/zh_CN/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="de_DE" href="http://gorm.io/de_DE/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="es_ES" href="http://gorm.io/es_ES/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="id_ID" href="http://gorm.io/id_ID/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="it_IT" href="http://gorm.io/it_IT/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="ja_JP" href="http://gorm.io/ja_JP/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="ru_RU" href="http://gorm.io/ru_RU/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="fr_FR" href="http://gorm.io/fr_FR/docs/conventions.html">
+    
+      <link rel="alternative" hreflang="pt_BR" href="http://gorm.io/pt_BR/docs/conventions.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <meta name="generator" content="Hexo 3.8.0">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="GORM">
+  <!-- Open Graph -->
+  <meta name="description" content="gorm.Modelgorm.Model es una estructura básica de GoLang que incluye los siguientes campos: ID, Creado, Actualizado, Borrado. It may be embeded into your model or you may build your own model without i">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Conventions">
+<meta property="og:url" content="http://gorm.io/es_ES/docs/conventions.html">
+<meta property="og:site_name" content="GORM">
+<meta property="og:description" content="gorm.Modelgorm.Model es una estructura básica de GoLang que incluye los siguientes campos: ID, Creado, Actualizado, Borrado. It may be embeded into your model or you may build your own model without i">
+<meta property="og:locale" content="es_ES">
+<meta property="og:updated_time" content="2019-11-07T06:22:36.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Conventions">
+<meta name="twitter:description" content="gorm.Modelgorm.Model es una estructura básica de GoLang que incluye los siguientes campos: ID, Creado, Actualizado, Borrado. It may be embeded into your model or you may build your own model without i">
+<meta name="twitter:site" content="zhangjinzhu">
+  <!-- Google Tag Manager -->
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSNPD75');</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/es_ES/" id="logo">GORM</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/es_ES/docs/" class="main-nav-link"><i class="fa fa-book"></i>Documentos</a><a href="/es_ES/community.html" class="main-nav-link"><i class="fa fa-slack"></i>Comunidad</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/es_ES/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribuir</a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Buscar documentos...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>Español</span></label>
+      <select id="lang-select" data-canonical="docs/conventions.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh_CN">简体中文</option>
+        
+          <option value="de_DE">Deutsch</option>
+        
+          <option value="es_ES" selected>Español</option>
+        
+          <option value="id_ID">bahasa Indonesia</option>
+        
+          <option value="it_IT">Italiano</option>
+        
+          <option value="ja_JP">日本語</option>
+        
+          <option value="ru_RU">Русский</option>
+        
+          <option value="fr_FR">French</option>
+        
+          <option value="pt_BR">Brazilian Portuguese</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Conventions</h1>
+                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/es_ES/docs/conventions.md" class="article-edit-link" title="Mejorar este documento"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="gorm-Model" class="article-heading"><a href="#gorm-Model" class="headerlink" title="gorm.Model"></a>gorm.Model<a class="article-anchor" href="#gorm-Model" aria-hidden="true"></a></h2><p><code>gorm.Model</code> es una estructura básica de GoLang que incluye los siguientes campos: <code>ID</code>, <code>Creado</code>, <code>Actualizado</code>, <code>Borrado</code>.</p>
+<p>It may be embeded into your model or you may build your own model without it.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Definición de gorm.Model type Model struct &#123;   ID uint `gorm:"primary_key"`   CreatedAt time.Time   UpdatedAt time.Time   DeletedAt *time.Time &#125; // Inyectar campos `ID`, `CreatedAt`, `UpdatedAt`, `DeletedAt` en el modelo `User` type User struct &#123;   gorm.Model   Name string &#125; // Declarando el modelo sin gorm.Model type User struct &#123;   ID int   Name string &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="ID-como-Clave-Primaria" class="article-heading"><a href="#ID-como-Clave-Primaria" class="headerlink" title="ID como Clave Primaria"></a><code>ID</code> como Clave Primaria<a class="article-anchor" href="#ID-como-Clave-Primaria" aria-hidden="true"></a></h2><p>GORM uses any field with the name <code>ID</code> as the table’s primary key by default.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;   ID <span class="keyword">string</span> <span class="comment">// el campo llamado `ID` se utilizará como campo primario por defecto   Name string &#125; // Establecer campo `AnimalID` como campo primario type Animal struct &#123;   AnimalID int64 `gorm:"primary_key"`   Name string   Age int64 &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Nombre-de-la-Tabla-Pluralizada" class="article-heading"><a href="#Nombre-de-la-Tabla-Pluralizada" class="headerlink" title="Nombre de la Tabla Pluralizada"></a>Nombre de la Tabla Pluralizada<a class="article-anchor" href="#Nombre-de-la-Tabla-Pluralizada" aria-hidden="true"></a></h2><p>Table name is the pluralized version of struct name.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;&#125; <span class="comment">// el nombre de la tabla por defecto es `users` // Establecer el nombre de la tabla de Usuario para ser `profiles` func (User) TableName() string &#123;   return "profiles" &#125; func (u User) TableName() string &#123;     if u.Role == "admin" &#123;         return "admin_users"     &#125; else &#123;         return "users"     &#125; &#125; // Deshabilita la pluralización del nombre de la tabla, si se establece en verdadero, el nombre de la tabla `User` será `user` db.SingularTable(true)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Especificando-el-Nombre-de-la-Tabla" class="article-heading"><a href="#Especificando-el-Nombre-de-la-Tabla" class="headerlink" title="Especificando el Nombre de la Tabla"></a>Especificando el Nombre de la Tabla<a class="article-anchor" href="#Especificando-el-Nombre-de-la-Tabla" aria-hidden="true"></a></h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Crear la tabla `deleted_users` con la definición struct Usuario db.Table("deleted_users").CreateTable(&amp;User&#123;&#125;) var deleted_users []User db.Table("deleted_users").Find(&amp;deleted_users) //// SELECT * FROM deleted_users; db.Table("deleted_users").Where("name = ?", "jinzhu").Delete() //// DELETE FROM deleted_users WHERE name = 'jinzhu';</span></span><br></pre></td></tr></table></figure>
+<h3 id="Cambiar-nombre-de-tablas-predeterminados" class="article-heading"><a href="#Cambiar-nombre-de-tablas-predeterminados" class="headerlink" title="Cambiar nombre de tablas predeterminados"></a>Cambiar nombre de tablas predeterminados<a class="article-anchor" href="#Cambiar-nombre-de-tablas-predeterminados" aria-hidden="true"></a></h3><p>You can apply any rules on the default table name by defining the <code>DefaultTableNameHandler</code>.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">gorm.DefaultTableNameHandler = <span class="function"><span class="keyword">func</span> <span class="params">(db *gorm.DB, defaultTableName <span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;     <span class="keyword">return</span> <span class="string">"prefix_"</span> + defaultTableName; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Nombre-de-la-Columna-usando-Snake-Case" class="article-heading"><a href="#Nombre-de-la-Columna-usando-Snake-Case" class="headerlink" title="Nombre de la Columna usando Snake Case"></a>Nombre de la Columna usando Snake Case<a class="article-anchor" href="#Nombre-de-la-Columna-usando-Snake-Case" aria-hidden="true"></a></h2><p>Column names will be the field’s name is lower snake case.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;   ID <span class="keyword">uint</span> <span class="comment">// el nombre de la columna es `id`   Name string // el nombre de la columna es `name`   Birthday time.Time // el nombre de la columna es `birthday`   CreatedAt time.Time // el nombre de la columna es `created_at` &#125; // Sobreescribiendo el nombre de columna type Animal struct &#123;     AnimalId int64 `gorm:"column:beast_id"` // establecer el nombre de la columna a `beast_id`     Birthday time.Time `gorm:"column:day_of_the_beast"` // establecer el nombre de la columna a `day_of_the_beast`     Age int64 `gorm:"column:age_of_the_beast"` // establecer el nombre de la columna a `age_of_the_beast` &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Seguimiento-de-Marca-de-Tiempo" class="article-heading"><a href="#Seguimiento-de-Marca-de-Tiempo" class="headerlink" title="Seguimiento de Marca de Tiempo"></a>Seguimiento de Marca de Tiempo<a class="article-anchor" href="#Seguimiento-de-Marca-de-Tiempo" aria-hidden="true"></a></h2><h3 id="CreatedAt" class="article-heading"><a href="#CreatedAt" class="headerlink" title="CreatedAt"></a>CreatedAt<a class="article-anchor" href="#CreatedAt" aria-hidden="true"></a></h3><p>For models having a <code>CreatedAt</code> field, it will be set to the time when the record is first created.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Create(&amp;user) <span class="comment">// se establecerá `CreatedAt` a la hora actual // Para cambiar su valor, puede usar `Update` db.Model(&amp;user).Update("CreatedAt", time.Now())</span></span><br></pre></td></tr></table></figure>
+<h3 id="UpdatedAt" class="article-heading"><a href="#UpdatedAt" class="headerlink" title="UpdatedAt"></a>UpdatedAt<a class="article-anchor" href="#UpdatedAt" aria-hidden="true"></a></h3><p>For models having an <code>UpdatedAt</code> field, it will be set to time when the record is updated.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Save(&amp;user) <span class="comment">// se establecerá `UpdatedAt` a la hora actual db.Model(&amp;user).Update("name", "jinzhu") // se establecerá `UpdatedAt` a la hora actual</span></span><br></pre></td></tr></table></figure>
+<h3 id="DeletedAt" class="article-heading"><a href="#DeletedAt" class="headerlink" title="DeletedAt"></a>DeletedAt<a class="article-anchor" href="#DeletedAt" aria-hidden="true"></a></h3><p>For models with a <code>DeletedAt</code> field, when <code>Delete</code> is called on that instance, it won’t truly be deleted from database, but will set its <code>DeletedAt</code> field to the current time. Refer to <a href="/docs/delete.html#Soft-Delete">Soft Delete</a></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-07T06:22:36.078Z" itemprop="dateModified">Última actualización: 2019-11-07</time>
+<a href="models.html" class="article-footer-prev" title="Declarando Modelos"><i class="fa fa-chevron-left"></i><span>Anterior</span></a><a href="connecting_to_the_database.html" class="article-footer-next" title="Conectando a Base de Datos"><span>Siguiente</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+<div id="disqus_thread"></div>
+
+
+<script>
+var disqus_config = function () {
+this.page.url = 'http://gorm.io/es_ES/docs/conventions.html';
+this.page.identifier = 'http://gorm.io/es_ES/docs/conventions.html';
+this.language = 'es';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gorm.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+</section>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
+              <strong class="sidebar-title">Contenidos</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#gorm-Model"><span class="toc-text">gorm.Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ID-como-Clave-Primaria"><span class="toc-text">ID como Clave Primaria</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nombre-de-la-Tabla-Pluralizada"><span class="toc-text">Nombre de la Tabla Pluralizada</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Especificando-el-Nombre-de-la-Tabla"><span class="toc-text">Especificando el Nombre de la Tabla</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cambiar-nombre-de-tablas-predeterminados"><span class="toc-text">Cambiar nombre de tablas predeterminados</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nombre-de-la-Columna-usando-Snake-Case"><span class="toc-text">Nombre de la Columna usando Snake Case</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Seguimiento-de-Marca-de-Tiempo"><span class="toc-text">Seguimiento de Marca de Tiempo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CreatedAt"><span class="toc-text">CreatedAt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UpdatedAt"><span class="toc-text">UpdatedAt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DeletedAt"><span class="toc-text">DeletedAt</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Volver al principio</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Empezando</strong><a href="index.html" class="sidebar-link">Información General</a><a href="models.html" class="sidebar-link">Declarando Modelos</a><a href="conventions.html" class="sidebar-link current">Convenciones</a><a href="connecting_to_the_database.html" class="sidebar-link">Conectando a Base de Datos</a><strong class="sidebar-title">CRUD Interface</strong><a href="create.html" class="sidebar-link">Crear</a><a href="query.html" class="sidebar-link">Query</a><a href="update.html" class="sidebar-link">Actualizar</a><a href="delete.html" class="sidebar-link">Eliminar</a><strong class="sidebar-title">Asociaciones</strong><a href="belongs_to.html" class="sidebar-link">Pertenece A</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Asociaciones</a><a href="preload.html" class="sidebar-link">Preloading (Eager Loading)</a><strong class="sidebar-title">Tutoriales</strong><a href="method_chaining.html" class="sidebar-link">Method Chaining</a><a href="error_handling.html" class="sidebar-link">Manejo de Errores</a><a href="hooks.html" class="sidebar-link">Ganchos</a><a href="transactions.html" class="sidebar-link">Transacciones</a><a href="migration.html" class="sidebar-link">Migración</a><a href="sql_builder.html" class="sidebar-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Interfaz de base de datos genérica</a><strong class="sidebar-title">Tópicos Avanzados</strong><a href="composite_primary_key.html" class="sidebar-link">Composite Primary Key</a><a href="write_plugins.html" class="sidebar-link">Write Plugins</a><a href="dialects.html" class="sidebar-link">GORM Dialects</a><a href="logger.html" class="sidebar-link">Logger</a><a href="changelog.html" class="sidebar-link">ChangeLog</a><a href="/community.html" class="sidebar-link">Comunidad</a><a href="/contribute.html" class="sidebar-link">Contribuir</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Traducir sitio actual</a>
+  </div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2013~2019 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
+      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Inicio</a>
+      </li>
+      <a href="/es_ES/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Documentos</a><a href="/es_ES/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>Comunidad</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/es_ES/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribuir</a>
+    </ul>
+    
+      <strong class="mobile-nav-title">Empezando</strong><a href="index.html" class="mobile-nav-link">Información General</a><a href="models.html" class="mobile-nav-link">Declarando Modelos</a><a href="conventions.html" class="mobile-nav-link current">Convenciones</a><a href="connecting_to_the_database.html" class="mobile-nav-link">Conectando a Base de Datos</a><strong class="mobile-nav-title">CRUD Interface</strong><a href="create.html" class="mobile-nav-link">Crear</a><a href="query.html" class="mobile-nav-link">Query</a><a href="update.html" class="mobile-nav-link">Actualizar</a><a href="delete.html" class="mobile-nav-link">Eliminar</a><strong class="mobile-nav-title">Asociaciones</strong><a href="belongs_to.html" class="mobile-nav-link">Pertenece A</a><a href="has_one.html" class="mobile-nav-link">Has One</a><a href="has_many.html" class="mobile-nav-link">Has Many</a><a href="many_to_many.html" class="mobile-nav-link">Many To Many</a><a href="associations.html" class="mobile-nav-link">Asociaciones</a><a href="preload.html" class="mobile-nav-link">Preloading (Eager Loading)</a><strong class="mobile-nav-title">Tutoriales</strong><a href="method_chaining.html" class="mobile-nav-link">Method Chaining</a><a href="error_handling.html" class="mobile-nav-link">Manejo de Errores</a><a href="hooks.html" class="mobile-nav-link">Ganchos</a><a href="transactions.html" class="mobile-nav-link">Transacciones</a><a href="migration.html" class="mobile-nav-link">Migración</a><a href="sql_builder.html" class="mobile-nav-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="mobile-nav-link">Interfaz de base de datos genérica</a><strong class="mobile-nav-title">Tópicos Avanzados</strong><a href="composite_primary_key.html" class="mobile-nav-link">Composite Primary Key</a><a href="write_plugins.html" class="mobile-nav-link">Write Plugins</a><a href="dialects.html" class="mobile-nav-link">GORM Dialects</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="changelog.html" class="mobile-nav-link">ChangeLog</a><a href="/community.html" class="mobile-nav-link">Comunidad</a><a href="/contribute.html" class="mobile-nav-link">Contribuir</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">Traducir sitio actual</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>Español</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/conventions.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh_CN">简体中文</option>
+      
+        <option value="de_DE">Deutsch</option>
+      
+        <option value="es_ES" selected>Español</option>
+      
+        <option value="id_ID">bahasa Indonesia</option>
+      
+        <option value="it_IT">Italiano</option>
+      
+        <option value="ja_JP">日本語</option>
+      
+        <option value="ru_RU">Русский</option>
+      
+        <option value="fr_FR">French</option>
+      
+        <option value="pt_BR">Brazilian Portuguese</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="/js/code_expander.js"></script>
+<script src="/js/404_fix.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSNPD75" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+</html>

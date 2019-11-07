@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Определения | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://gorm.io/ru_RU/docs/conventions.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <meta name="generator" content="Hexo 3.8.0">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="GORM">
+  <!-- Open Graph -->
+  <meta name="description" content="gorm.Modelgorm.Model является базовой структурой GoLang, которая включает следующие поля: ID, CreatedAt, UpdatedAt, DeletedAt. Она может быть встроена в вашу модель или вы можете построить свою собств">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Определения">
+<meta property="og:url" content="http://gorm.io/ru_RU/docs/conventions.html">
+<meta property="og:site_name" content="GORM">
+<meta property="og:description" content="gorm.Modelgorm.Model является базовой структурой GoLang, которая включает следующие поля: ID, CreatedAt, UpdatedAt, DeletedAt. Она может быть встроена в вашу модель или вы можете построить свою собств">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:updated_time" content="2019-11-07T06:22:36.095Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Определения">
+<meta name="twitter:description" content="gorm.Modelgorm.Model является базовой структурой GoLang, которая включает следующие поля: ID, CreatedAt, UpdatedAt, DeletedAt. Она может быть встроена в вашу модель или вы можете построить свою собств">
+<meta name="twitter:site" content="zhangjinzhu">
+  <!-- Google Tag Manager -->
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSNPD75');</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/ru_RU/" id="logo">GORM</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/ru_RU/docs/" class="main-nav-link"><i class="fa fa-book"></i>Документация</a><a href="/ru_RU/community.html" class="main-nav-link"><i class="fa fa-slack"></i>Сообщество</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Поддержать</a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Поиск...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>Русский</span></label>
+      <select id="lang-select" data-canonical="docs/conventions.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh_CN">简体中文</option>
+        
+          <option value="de_DE">Deutsch</option>
+        
+          <option value="es_ES">Español</option>
+        
+          <option value="id_ID">bahasa Indonesia</option>
+        
+          <option value="it_IT">Italiano</option>
+        
+          <option value="ja_JP">日本語</option>
+        
+          <option value="ru_RU" selected>Русский</option>
+        
+          <option value="fr_FR">French</option>
+        
+          <option value="pt_BR">Brazilian Portuguese</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Определения</h1>
+                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/ru_RU/docs/conventions.md" class="article-edit-link" title="Улучшить этот раздел"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="gorm-Model" class="article-heading"><a href="#gorm-Model" class="headerlink" title="gorm.Model"></a>gorm.Model<a class="article-anchor" href="#gorm-Model" aria-hidden="true"></a></h2><p><code>gorm.Model</code> является базовой структурой GoLang, которая включает следующие поля: <code>ID</code>, <code>CreatedAt</code>, <code>UpdatedAt</code>, <code>DeletedAt</code>.</p>
+<p>Она может быть встроена в вашу модель или вы можете построить свою собственную модель без нее.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Определение gorm.Model</span></span><br><span class="line"><span class="keyword">type</span> Model <span class="keyword">struct</span> &#123;</span><br><span class="line">  ID        <span class="keyword">uint</span> <span class="string">`gorm:"primary_key"`</span></span><br><span class="line">  CreatedAt time.Time</span><br><span class="line">  UpdatedAt time.Time</span><br><span class="line">  DeletedAt *time.Time</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Добавление полей `ID`, `CreatedAt`, `UpdatedAt`, `DeletedAt` в модель `User`</span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Обявление модели w/o gorm.Model</span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">  ID   <span class="keyword">int</span></span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="ID-это-первичный-ключ" class="article-heading"><a href="#ID-это-первичный-ключ" class="headerlink" title="ID это первичный ключ"></a><code>ID</code> это первичный ключ<a class="article-anchor" href="#ID-это-первичный-ключ" aria-hidden="true"></a></h2><p>GORM использует любое поле с именем <code>ID</code> как первичный ключ таблицы по умолчанию.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">  ID   <span class="keyword">string</span> <span class="comment">// поле с название `ID` будет использовано как первичный ключ по умолчанию</span></span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Установить поле `AnimalID` как первичный ключ</span></span><br><span class="line"><span class="keyword">type</span> Animal <span class="keyword">struct</span> &#123;</span><br><span class="line">  AnimalID <span class="keyword">int64</span> <span class="string">`gorm:"primary_key"`</span></span><br><span class="line">  Name     <span class="keyword">string</span></span><br><span class="line">  Age      <span class="keyword">int64</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Плюрализированное-имя-таблицы" class="article-heading"><a href="#Плюрализированное-имя-таблицы" class="headerlink" title="Плюрализированное имя таблицы"></a>Плюрализированное имя таблицы<a class="article-anchor" href="#Плюрализированное-имя-таблицы" aria-hidden="true"></a></h2><p>Название таблицы - плюралистическая версия структурного имени.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;&#125; <span class="comment">// название таблицы по умолчанию `users`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Установить название таблицы `profiles` для User's</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(User)</span> <span class="title">TableName</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"profiles"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(u User)</span> <span class="title">TableName</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> u.Role == <span class="string">"admin"</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"admin_users"</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"users"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Отключить плюрализирование имени таблицы, если выставлено в true, название таблицы для модели `User`'s будет `user`</span></span><br><span class="line">db.SingularTable(<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Указание-названия-таблицы" class="article-heading"><a href="#Указание-названия-таблицы" class="headerlink" title="Указание названия таблицы"></a>Указание названия таблицы<a class="article-anchor" href="#Указание-названия-таблицы" aria-hidden="true"></a></h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Создать таблицу `deleted_users` со структурой User's</span></span><br><span class="line">db.Table(<span class="string">"deleted_users"</span>).CreateTable(&amp;User&#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> deleted_users []User</span><br><span class="line">db.Table(<span class="string">"deleted_users"</span>).Find(&amp;deleted_users)</span><br><span class="line"><span class="comment">//// SELECT * FROM deleted_users;</span></span><br><span class="line"></span><br><span class="line">db.Table(<span class="string">"deleted_users"</span>).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Delete()</span><br><span class="line"><span class="comment">//// DELETE FROM deleted_users WHERE name = 'jinzhu';</span></span><br></pre></td></tr></table></figure>
+<h3 id="Изменение-названий-полей-по-умолчанию" class="article-heading"><a href="#Изменение-названий-полей-по-умолчанию" class="headerlink" title="Изменение названий полей по умолчанию"></a>Изменение названий полей по умолчанию<a class="article-anchor" href="#Изменение-названий-полей-по-умолчанию" aria-hidden="true"></a></h3><p>Вы можете применить любые правила по умолчанию, определив <code>DefaultTableNameHandler</code>.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">gorm.DefaultTableNameHandler = <span class="function"><span class="keyword">func</span> <span class="params">(db *gorm.DB, defaultTableName <span class="keyword">string</span>)</span> <span class="title">string</span></span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"prefix_"</span> + defaultTableName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Snake-Case-Column-Name" class="article-heading"><a href="#Snake-Case-Column-Name" class="headerlink" title="Snake Case Column Name"></a>Snake Case Column Name<a class="article-anchor" href="#Snake-Case-Column-Name" aria-hidden="true"></a></h2><p>Названия столбцов будут именовать поле нижней части змеи.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">  ID        <span class="keyword">uint</span>      <span class="comment">// название колонки `id`</span></span><br><span class="line">  Name      <span class="keyword">string</span>    <span class="comment">// название колонки `name`</span></span><br><span class="line">  Birthday  time.Time <span class="comment">// название колонки `birthday`</span></span><br><span class="line">  CreatedAt time.Time <span class="comment">// название колонки `created_at`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Overriding Column Name</span></span><br><span class="line"><span class="keyword">type</span> Animal <span class="keyword">struct</span> &#123;</span><br><span class="line">    AnimalId    <span class="keyword">int64</span>     <span class="string">`gorm:"column:beast_id"`</span>         <span class="comment">// установить название колонки `beast_id`</span></span><br><span class="line">    Birthday    time.Time <span class="string">`gorm:"column:day_of_the_beast"`</span> <span class="comment">// установить название колонки `day_of_the_beast`</span></span><br><span class="line">    Age         <span class="keyword">int64</span>     <span class="string">`gorm:"column:age_of_the_beast"`</span> <span class="comment">// установить название колонки `age_of_the_beast`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Отслеживание-метки-времени" class="article-heading"><a href="#Отслеживание-метки-времени" class="headerlink" title="Отслеживание метки времени"></a>Отслеживание метки времени<a class="article-anchor" href="#Отслеживание-метки-времени" aria-hidden="true"></a></h2><h3 id="CreatedAt" class="article-heading"><a href="#CreatedAt" class="headerlink" title="CreatedAt"></a>CreatedAt<a class="article-anchor" href="#CreatedAt" aria-hidden="true"></a></h3><p>Для моделей, имеющих поле <code>CreatedAt</code>, оно будет установлено в момент, когда запись будет создана.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Create(&amp;user) <span class="comment">// установит `CreatedAt` на текущее unix время</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Для изменения его значения, вы должны использовать `Update`</span></span><br><span class="line">db.Model(&amp;user).Update(<span class="string">"CreatedAt"</span>, time.Now())</span><br></pre></td></tr></table></figure>
+<h3 id="UpdatedAt" class="article-heading"><a href="#UpdatedAt" class="headerlink" title="UpdatedAt"></a>UpdatedAt<a class="article-anchor" href="#UpdatedAt" aria-hidden="true"></a></h3><p>Для моделей, имеющих поле <code>UpdatedAt</code>, оно будет изменяться в момент, когда запись будет изменена.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Save(&amp;user) <span class="comment">// установит `UpdatedAt` на текущее unix время</span></span><br><span class="line"></span><br><span class="line">db.Model(&amp;user).Update(<span class="string">"name"</span>, <span class="string">"jinzhu"</span>) <span class="comment">// установит `UpdatedAt` на текущее unix время</span></span><br></pre></td></tr></table></figure>
+<h3 id="DeletedAt" class="article-heading"><a href="#DeletedAt" class="headerlink" title="DeletedAt"></a>DeletedAt<a class="article-anchor" href="#DeletedAt" aria-hidden="true"></a></h3><p>Для моделей с полем <code>DeletedAt</code>, когда вызывается метод экземпляра <code>Delete</code>, он не будет по-настоящему удален из базы данных, а установит поле <code>DeletedAt</code> на текущее unix время. Ссылка на <a href="/docs/delete.html#Soft-Delete">Мягкое удаление</a></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-07T06:22:36.095Z" itemprop="dateModified">Последнее обновление: 2019-11-07</time>
+<a href="models.html" class="article-footer-prev" title="Объявление моделей"><i class="fa fa-chevron-left"></i><span>Назад</span></a><a href="connecting_to_the_database.html" class="article-footer-next" title="Подключение к базе данных"><span>Далее</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+<div id="disqus_thread"></div>
+
+
+<script>
+var disqus_config = function () {
+this.page.url = 'http://gorm.io/ru_RU/docs/conventions.html';
+this.page.identifier = 'http://gorm.io/ru_RU/docs/conventions.html';
+this.language = 'ru';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gorm.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+</section>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
+              <strong class="sidebar-title">Содержание</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#gorm-Model"><span class="toc-text">gorm.Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ID-это-первичный-ключ"><span class="toc-text">ID это первичный ключ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Плюрализированное-имя-таблицы"><span class="toc-text">Плюрализированное имя таблицы</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Указание-названия-таблицы"><span class="toc-text">Указание названия таблицы</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Изменение-названий-полей-по-умолчанию"><span class="toc-text">Изменение названий полей по умолчанию</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Snake-Case-Column-Name"><span class="toc-text">Snake Case Column Name</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Отслеживание-метки-времени"><span class="toc-text">Отслеживание метки времени</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CreatedAt"><span class="toc-text">CreatedAt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UpdatedAt"><span class="toc-text">UpdatedAt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DeletedAt"><span class="toc-text">DeletedAt</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Вернуться к началу</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">С чего начать?</strong><a href="index.html" class="sidebar-link">Общие сведения</a><a href="models.html" class="sidebar-link">Объявление моделей</a><a href="conventions.html" class="sidebar-link current">Определения</a><a href="connecting_to_the_database.html" class="sidebar-link">Подключение к базе данных</a><strong class="sidebar-title">CRUD интерфейс</strong><a href="create.html" class="sidebar-link">Создание</a><a href="query.html" class="sidebar-link">Запрос</a><a href="update.html" class="sidebar-link">Обновление</a><a href="delete.html" class="sidebar-link">Удаление</a><strong class="sidebar-title">Связи</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Связи</a><a href="preload.html" class="sidebar-link">Подгрузка данных(Жадная загрузка)</a><strong class="sidebar-title">Туториалы</strong><a href="method_chaining.html" class="sidebar-link">Цепочка вызовов</a><a href="error_handling.html" class="sidebar-link">Обработка ошибок</a><a href="hooks.html" class="sidebar-link">Хуки</a><a href="transactions.html" class="sidebar-link">Транзакции</a><a href="migration.html" class="sidebar-link">Миграции</a><a href="sql_builder.html" class="sidebar-link">Чистый SQL и SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Нативный интерфейс БД</a><strong class="sidebar-title">Дополнительные возможности</strong><a href="composite_primary_key.html" class="sidebar-link">Составной первичный ключ</a><a href="write_plugins.html" class="sidebar-link">Плагины (Колбеки)</a><a href="dialects.html" class="sidebar-link">Поддерживаемые БД</a><a href="logger.html" class="sidebar-link">Логирование</a><a href="changelog.html" class="sidebar-link">История изменений</a><a href="/community.html" class="sidebar-link">Сообщество</a><a href="/contribute.html" class="sidebar-link">Сделать вклад</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Перевод текущего сайта</a>
+  </div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2013~2019 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
+      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Главная</a>
+      </li>
+      <a href="/ru_RU/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Документация</a><a href="/ru_RU/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>Сообщество</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Поддержать</a>
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>Русский</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/conventions.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh_CN">简体中文</option>
+      
+        <option value="de_DE">Deutsch</option>
+      
+        <option value="es_ES">Español</option>
+      
+        <option value="id_ID">bahasa Indonesia</option>
+      
+        <option value="it_IT">Italiano</option>
+      
+        <option value="ja_JP">日本語</option>
+      
+        <option value="ru_RU" selected>Русский</option>
+      
+        <option value="fr_FR">French</option>
+      
+        <option value="pt_BR">Brazilian Portuguese</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="/js/code_expander.js"></script>
+<script src="/js/404_fix.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSNPD75" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+</html>

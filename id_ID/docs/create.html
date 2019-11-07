@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id_ID">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Membuat | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://gorm.io/id_ID/docs/create.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="http://gorm.io/docs/create.html">
+    
+      <link rel="alternative" hreflang="zh_CN" href="http://gorm.io/zh_CN/docs/create.html">
+    
+      <link rel="alternative" hreflang="de_DE" href="http://gorm.io/de_DE/docs/create.html">
+    
+      <link rel="alternative" hreflang="es_ES" href="http://gorm.io/es_ES/docs/create.html">
+    
+      <link rel="alternative" hreflang="id_ID" href="http://gorm.io/id_ID/docs/create.html">
+    
+      <link rel="alternative" hreflang="it_IT" href="http://gorm.io/it_IT/docs/create.html">
+    
+      <link rel="alternative" hreflang="ja_JP" href="http://gorm.io/ja_JP/docs/create.html">
+    
+      <link rel="alternative" hreflang="ru_RU" href="http://gorm.io/ru_RU/docs/create.html">
+    
+      <link rel="alternative" hreflang="fr_FR" href="http://gorm.io/fr_FR/docs/create.html">
+    
+      <link rel="alternative" hreflang="pt_BR" href="http://gorm.io/pt_BR/docs/create.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <meta name="generator" content="Hexo 3.8.0">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="GORM">
+  <!-- Open Graph -->
+  <meta name="description" content="Buat Baris Datauser := User&amp;#123;Name: &quot;Jinzhu&quot;, Age: 18, Birthday: time.Now()&amp;#125;db.NewRecord(user) // =&amp;gt; kembali nilai `true` ketika primary key kosongdb.Create(&amp;amp;user)db.NewRecord(user) //">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Membuat">
+<meta property="og:url" content="http://gorm.io/id_ID/docs/create.html">
+<meta property="og:site_name" content="GORM">
+<meta property="og:description" content="Buat Baris Datauser := User&amp;#123;Name: &quot;Jinzhu&quot;, Age: 18, Birthday: time.Now()&amp;#125;db.NewRecord(user) // =&amp;gt; kembali nilai `true` ketika primary key kosongdb.Create(&amp;amp;user)db.NewRecord(user) //">
+<meta property="og:locale" content="id_ID">
+<meta property="og:updated_time" content="2019-11-07T06:22:36.083Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Membuat">
+<meta name="twitter:description" content="Buat Baris Datauser := User&amp;#123;Name: &quot;Jinzhu&quot;, Age: 18, Birthday: time.Now()&amp;#125;db.NewRecord(user) // =&amp;gt; kembali nilai `true` ketika primary key kosongdb.Create(&amp;amp;user)db.NewRecord(user) //">
+<meta name="twitter:site" content="zhangjinzhu">
+  <!-- Google Tag Manager -->
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSNPD75');</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/id_ID/" id="logo">GORM</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/id_ID/docs/" class="main-nav-link"><i class="fa fa-book"></i>Docs</a><a href="/id_ID/community.html" class="main-nav-link"><i class="fa fa-slack"></i>Community</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/id_ID/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Mencari dokumen...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>bahasa Indonesia</span></label>
+      <select id="lang-select" data-canonical="docs/create.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh_CN">简体中文</option>
+        
+          <option value="de_DE">Deutsch</option>
+        
+          <option value="es_ES">Español</option>
+        
+          <option value="id_ID" selected>bahasa Indonesia</option>
+        
+          <option value="it_IT">Italiano</option>
+        
+          <option value="ja_JP">日本語</option>
+        
+          <option value="ru_RU">Русский</option>
+        
+          <option value="fr_FR">French</option>
+        
+          <option value="pt_BR">Brazilian Portuguese</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Membuat</h1>
+                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/id_ID/docs/create.md" class="article-edit-link" title="Memperbaiki dokumen ini"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="Buat-Baris-Data" class="article-heading"><a href="#Buat-Baris-Data" class="headerlink" title="Buat Baris Data"></a>Buat Baris Data<a class="article-anchor" href="#Buat-Baris-Data" aria-hidden="true"></a></h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">user := User&#123;Name: <span class="string">"Jinzhu"</span>, Age: <span class="number">18</span>, Birthday: time.Now()&#125;</span><br><span class="line"></span><br><span class="line">db.NewRecord(user) <span class="comment">// =&gt; kembali nilai `true` ketika primary key kosong</span></span><br><span class="line"></span><br><span class="line">db.Create(&amp;user)</span><br><span class="line"></span><br><span class="line">db.NewRecord(user) <span class="comment">// =&gt; kembali nilai `false` setelah `user` dibuat</span></span><br></pre></td></tr></table></figure>
+<h2 id="Nilai-Default" class="article-heading"><a href="#Nilai-Default" class="headerlink" title="Nilai Default"></a>Nilai Default<a class="article-anchor" href="#Nilai-Default" aria-hidden="true"></a></h2><p>Anda dapat mendefinisikan nilai default dari sebuah field dengan sebuah tanda. Contohnya:</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Animal <span class="keyword">struct</span> &#123;</span><br><span class="line">    ID   <span class="keyword">int64</span></span><br><span class="line">    Name <span class="keyword">string</span> <span class="string">`gorm:"default:'galeone'"`</span></span><br><span class="line">    Age  <span class="keyword">int64</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lalu penambahan SQL akan mengecualikan fields yang tidak memiliki nilai atau yang memiliki <a href="https://tour.golang.org/basics/12" target="_blank" rel="noopener">nilai nol</a>. Setelah memasukkan record ke database, gorm akan memuat nilai-nilai field tersebut dari database.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> animal = Animal&#123;Age: <span class="number">99</span>, Name: <span class="string">""</span>&#125;</span><br><span class="line">db.Create(&amp;animal)</span><br><span class="line"><span class="comment">// INSERT INTO animals("age") values('99');</span></span><br><span class="line"><span class="comment">// SELECT name from animals WHERE ID=111; // nilai dari primary key ialah 111</span></span><br><span class="line"><span class="comment">// animal.Name =&gt; 'galeone'</span></span><br></pre></td></tr></table></figure>
+<p><strong>CATATAN</strong> semua field yang memiliki nilai nol, seperti <code>0</code>, <code>&#39;&#39;</code>, <code>false</code> atau <a href="https://tour.golang.org/basics/12" target="_blank" rel="noopener">nilai nol</a> lain, tidak akan disimpan ke database tapi akan menggunakan nilai default. Apabila anda ingin mencegal hal ini, gunakan tipe pointer atau scanner/valuer, seperti:</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Menggunakan nilai pointer </span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">  Age  *<span class="keyword">int</span> <span class="string">`gorm:"default:18"`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Menggunakan scanner/valuer</span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">  Age  sql.NullInt64 <span class="string">`gorm:"default:18"`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Menetapkan-Nilai-Bidang-Dalam-Hooks" class="article-heading"><a href="#Menetapkan-Nilai-Bidang-Dalam-Hooks" class="headerlink" title="Menetapkan Nilai Bidang Dalam Hooks"></a>Menetapkan Nilai Bidang Dalam Hooks<a class="article-anchor" href="#Menetapkan-Nilai-Bidang-Dalam-Hooks" aria-hidden="true"></a></h2><p>Apabila anda ingin memperbaharui nilai dari sebuah field dalam hook <code>BeforeCreate</code>, anda dapat menggunakan <code>scope.SetColumn</code>, contohnya:</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(user *User)</span> <span class="title">BeforeCreate</span><span class="params">(scope *gorm.Scope)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">  scope.SetColumn(<span class="string">"ID"</span>, uuid.New())</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Membuat-dengan-Ekstra-Opsi" class="article-heading"><a href="#Membuat-dengan-Ekstra-Opsi" class="headerlink" title="Membuat dengan Ekstra Opsi"></a>Membuat dengan Ekstra Opsi<a class="article-anchor" href="#Membuat-dengan-Ekstra-Opsi" aria-hidden="true"></a></h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Tambah ekstra SQL opsi untuk insert SQL</span></span><br><span class="line">db.Set(<span class="string">"gorm:insert_option"</span>, <span class="string">"ON CONFLICT"</span>).Create(&amp;product)</span><br><span class="line"><span class="comment">// INSERT INTO products (name, code) VALUES ("name", "code") ON CONFLICT;</span></span><br></pre></td></tr></table></figure>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-07T06:22:36.083Z" itemprop="dateModified">Terakhir diperbarui: 2019-11-07</time>
+<a href="connecting_to_the_database.html" class="article-footer-prev" title="Menghubungkan ke Basis Data"><i class="fa fa-chevron-left"></i><span>Sebelumnya</span></a><a href="query.html" class="article-footer-next" title="Kueri"><span>Selanjutnya</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+<div id="disqus_thread"></div>
+
+
+<script>
+var disqus_config = function () {
+this.page.url = 'http://gorm.io/id_ID/docs/create.html';
+this.page.identifier = 'http://gorm.io/id_ID/docs/create.html';
+this.language = 'id';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gorm.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+</section>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
+              <strong class="sidebar-title">Konten</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Buat-Baris-Data"><span class="toc-text">Buat Baris Data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nilai-Default"><span class="toc-text">Nilai Default</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Menetapkan-Nilai-Bidang-Dalam-Hooks"><span class="toc-text">Menetapkan Nilai Bidang Dalam Hooks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Membuat-dengan-Ekstra-Opsi"><span class="toc-text">Membuat dengan Ekstra Opsi</span></a></li></ol>
+              <a href="#" id="article-toc-top">Kembali ke Atas</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Memulai</strong><a href="index.html" class="sidebar-link">Ikhtisar</a><a href="models.html" class="sidebar-link">Mendeklarasikan Model</a><a href="conventions.html" class="sidebar-link">Konvensi</a><a href="connecting_to_the_database.html" class="sidebar-link">Menghubungkan ke Basis Data</a><strong class="sidebar-title">Antarmuka CRUD</strong><a href="create.html" class="sidebar-link current">Buat</a><a href="query.html" class="sidebar-link">Kueri</a><a href="update.html" class="sidebar-link">Perbarui</a><a href="delete.html" class="sidebar-link">Hapus</a><strong class="sidebar-title">Asosiasi</strong><a href="belongs_to.html" class="sidebar-link">Milik</a><a href="has_one.html" class="sidebar-link">Memiliki satu</a><a href="has_many.html" class="sidebar-link">Memiliki banyak</a><a href="many_to_many.html" class="sidebar-link">Banyak ke banyak</a><a href="associations.html" class="sidebar-link">Asosiasi</a><a href="preload.html" class="sidebar-link">Pramuat (Loading Eager)</a><strong class="sidebar-title">Tutorial</strong><a href="method_chaining.html" class="sidebar-link">Metode Rantai</a><a href="error_handling.html" class="sidebar-link">Penanganan Kesalahan</a><a href="hooks.html" class="sidebar-link">Kaitan</a><a href="transactions.html" class="sidebar-link">Transaksi</a><a href="migration.html" class="sidebar-link">Migrasi</a><a href="sql_builder.html" class="sidebar-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Antarmuka Database Generik</a><strong class="sidebar-title">Topik Lanjutan</strong><a href="composite_primary_key.html" class="sidebar-link">Kunci Utama Komposit</a><a href="write_plugins.html" class="sidebar-link">Tulis Plugin</a><a href="dialects.html" class="sidebar-link">GORM Dialects</a><a href="logger.html" class="sidebar-link">Logger</a><a href="changelog.html" class="sidebar-link">ChangeLog</a><a href="/community.html" class="sidebar-link">Komunitas</a><a href="/contribute.html" class="sidebar-link">Menyumbangkan</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Terjemahkan situs yang sekarang</a>
+  </div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2013~2019 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
+      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Home</a>
+      </li>
+      <a href="/id_ID/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Docs</a><a href="/id_ID/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>Community</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/id_ID/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
+    </ul>
+    
+      <strong class="mobile-nav-title">Memulai</strong><a href="index.html" class="mobile-nav-link">Ikhtisar</a><a href="models.html" class="mobile-nav-link">Mendeklarasikan Model</a><a href="conventions.html" class="mobile-nav-link">Konvensi</a><a href="connecting_to_the_database.html" class="mobile-nav-link">Menghubungkan ke Basis Data</a><strong class="mobile-nav-title">Antarmuka CRUD</strong><a href="create.html" class="mobile-nav-link current">Buat</a><a href="query.html" class="mobile-nav-link">Kueri</a><a href="update.html" class="mobile-nav-link">Perbarui</a><a href="delete.html" class="mobile-nav-link">Hapus</a><strong class="mobile-nav-title">Asosiasi</strong><a href="belongs_to.html" class="mobile-nav-link">Milik</a><a href="has_one.html" class="mobile-nav-link">Memiliki satu</a><a href="has_many.html" class="mobile-nav-link">Memiliki banyak</a><a href="many_to_many.html" class="mobile-nav-link">Banyak ke banyak</a><a href="associations.html" class="mobile-nav-link">Asosiasi</a><a href="preload.html" class="mobile-nav-link">Pramuat (Loading Eager)</a><strong class="mobile-nav-title">Tutorial</strong><a href="method_chaining.html" class="mobile-nav-link">Metode Rantai</a><a href="error_handling.html" class="mobile-nav-link">Penanganan Kesalahan</a><a href="hooks.html" class="mobile-nav-link">Kaitan</a><a href="transactions.html" class="mobile-nav-link">Transaksi</a><a href="migration.html" class="mobile-nav-link">Migrasi</a><a href="sql_builder.html" class="mobile-nav-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="mobile-nav-link">Antarmuka Database Generik</a><strong class="mobile-nav-title">Topik Lanjutan</strong><a href="composite_primary_key.html" class="mobile-nav-link">Kunci Utama Komposit</a><a href="write_plugins.html" class="mobile-nav-link">Tulis Plugin</a><a href="dialects.html" class="mobile-nav-link">GORM Dialects</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="changelog.html" class="mobile-nav-link">ChangeLog</a><a href="/community.html" class="mobile-nav-link">Komunitas</a><a href="/contribute.html" class="mobile-nav-link">Menyumbangkan</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">Terjemahkan situs yang sekarang</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>bahasa Indonesia</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/create.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh_CN">简体中文</option>
+      
+        <option value="de_DE">Deutsch</option>
+      
+        <option value="es_ES">Español</option>
+      
+        <option value="id_ID" selected>bahasa Indonesia</option>
+      
+        <option value="it_IT">Italiano</option>
+      
+        <option value="ja_JP">日本語</option>
+      
+        <option value="ru_RU">Русский</option>
+      
+        <option value="fr_FR">French</option>
+      
+        <option value="pt_BR">Brazilian Portuguese</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="/js/code_expander.js"></script>
+<script src="/js/404_fix.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSNPD75" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+</html>

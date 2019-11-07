@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id_ID">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Pertanyaan | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://gorm.io/id_ID/docs/query.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="http://gorm.io/docs/query.html">
+    
+      <link rel="alternative" hreflang="zh_CN" href="http://gorm.io/zh_CN/docs/query.html">
+    
+      <link rel="alternative" hreflang="de_DE" href="http://gorm.io/de_DE/docs/query.html">
+    
+      <link rel="alternative" hreflang="es_ES" href="http://gorm.io/es_ES/docs/query.html">
+    
+      <link rel="alternative" hreflang="id_ID" href="http://gorm.io/id_ID/docs/query.html">
+    
+      <link rel="alternative" hreflang="it_IT" href="http://gorm.io/it_IT/docs/query.html">
+    
+      <link rel="alternative" hreflang="ja_JP" href="http://gorm.io/ja_JP/docs/query.html">
+    
+      <link rel="alternative" hreflang="ru_RU" href="http://gorm.io/ru_RU/docs/query.html">
+    
+      <link rel="alternative" hreflang="fr_FR" href="http://gorm.io/fr_FR/docs/query.html">
+    
+      <link rel="alternative" hreflang="pt_BR" href="http://gorm.io/pt_BR/docs/query.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <meta name="generator" content="Hexo 3.8.0">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="GORM">
+  <!-- Open Graph -->
+  <meta name="description" content="Pertanyaan// Dapatkan rekaman pertama, pesan menurut kunci utama db.Pertama(&amp;amp;pengguna)//// PILIH * DARI pengguna MEMESAN Oleh BATAS id 1;// Dapatkan satu rekaman, tidak ada perintah ditentukan db.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pertanyaan">
+<meta property="og:url" content="http://gorm.io/id_ID/docs/query.html">
+<meta property="og:site_name" content="GORM">
+<meta property="og:description" content="Pertanyaan// Dapatkan rekaman pertama, pesan menurut kunci utama db.Pertama(&amp;amp;pengguna)//// PILIH * DARI pengguna MEMESAN Oleh BATAS id 1;// Dapatkan satu rekaman, tidak ada perintah ditentukan db.">
+<meta property="og:locale" content="id_ID">
+<meta property="og:updated_time" content="2019-11-07T06:22:36.084Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pertanyaan">
+<meta name="twitter:description" content="Pertanyaan// Dapatkan rekaman pertama, pesan menurut kunci utama db.Pertama(&amp;amp;pengguna)//// PILIH * DARI pengguna MEMESAN Oleh BATAS id 1;// Dapatkan satu rekaman, tidak ada perintah ditentukan db.">
+<meta name="twitter:site" content="zhangjinzhu">
+  <!-- Google Tag Manager -->
+  
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSNPD75');</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/id_ID/" id="logo">GORM</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/id_ID/docs/" class="main-nav-link"><i class="fa fa-book"></i>Docs</a><a href="/id_ID/community.html" class="main-nav-link"><i class="fa fa-slack"></i>Community</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/id_ID/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Mencari dokumen...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>bahasa Indonesia</span></label>
+      <select id="lang-select" data-canonical="docs/query.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh_CN">简体中文</option>
+        
+          <option value="de_DE">Deutsch</option>
+        
+          <option value="es_ES">Español</option>
+        
+          <option value="id_ID" selected>bahasa Indonesia</option>
+        
+          <option value="it_IT">Italiano</option>
+        
+          <option value="ja_JP">日本語</option>
+        
+          <option value="ru_RU">Русский</option>
+        
+          <option value="fr_FR">French</option>
+        
+          <option value="pt_BR">Brazilian Portuguese</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Pertanyaan</h1>
+                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/id_ID/docs/query.md" class="article-edit-link" title="Memperbaiki dokumen ini"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h2 id="Pertanyaan" class="article-heading"><a href="#Pertanyaan" class="headerlink" title="Pertanyaan"></a>Pertanyaan<a class="article-anchor" href="#Pertanyaan" aria-hidden="true"></a></h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Dapatkan rekaman pertama, pesan menurut kunci utama db.Pertama(&amp;pengguna)</span></span><br><span class="line"><span class="comment">//// PILIH * DARI pengguna MEMESAN Oleh BATAS id 1;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Dapatkan satu rekaman, tidak ada perintah ditentukan db.Mengambil(&amp;pengguna) </span></span><br><span class="line"><span class="comment">//// PILIH *DARI BATAS pengguna LIMIT 1;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Dapatkan rekaman terakhir, pesan menurut kunci utama </span></span><br><span class="line">db.Terakhir (&amp; pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI pesanan pengguna OLEH Batas id DESC 1;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Dapatkan semua rekaman</span></span><br><span class="line">db. Temukan (&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI pengguna;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Dapatkan rekaman dengan kunci utama (hanya bekerja untuk kunci utama bilangan bulat) </span></span><br><span class="line">db.Pertama(&amp;Pengguna, <span class="number">10</span>)</span><br><span class="line"><span class="comment">//// PILIH * DARI DIMANA id pengguna= 10;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Dimana" class="article-heading"><a href="#Dimana" class="headerlink" title="Dimana"></a>Dimana<a class="article-anchor" href="#Dimana" aria-hidden="true"></a></h3><h4 id="SQL-biasa" class="article-heading"><a href="#SQL-biasa" class="headerlink" title="SQL biasa"></a>SQL biasa<a class="article-anchor" href="#SQL-biasa" aria-hidden="true"></a></h4><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Get first matched record</span></span><br><span class="line">db.Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).First(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'jinzhu' limit 1;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Get all matched records</span></span><br><span class="line">db.Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'jinzhu';</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// &lt;&gt;</span></span><br><span class="line">db.Where(<span class="string">"name &lt;&gt; ?"</span>, <span class="string">"jinzhu"</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name &lt;&gt; 'jinzhu';</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// IN</span></span><br><span class="line">db.Where(<span class="string">"name IN (?)"</span>, []<span class="keyword">string</span>&#123;<span class="string">"jinzhu"</span>, <span class="string">"jinzhu 2"</span>&#125;).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name in ('jinzhu','jinzhu 2');</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// LIKE</span></span><br><span class="line">db.Where(<span class="string">"name LIKE ?"</span>, <span class="string">"%jin%"</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name LIKE '%jin%';</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// AND</span></span><br><span class="line">db.Where(<span class="string">"name = ? AND age &gt;= ?"</span>, <span class="string">"jinzhu"</span>, <span class="string">"22"</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'jinzhu' AND age &gt;= 22;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Time</span></span><br><span class="line">db.Where(<span class="string">"updated_at &gt; ?"</span>, lastWeek).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE updated_at &gt; '2000-01-01 00:00:00';</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// BETWEEN</span></span><br><span class="line">db.Where(<span class="string">"created_at BETWEEN ? AND ?"</span>, lastWeek, today).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE created_at BETWEEN '2000-01-01 00:00:00' AND '2000-01-08 00:00:00';</span></span><br></pre></td></tr></table></figure>
+<h4 id="Struktur-amp-Peta" class="article-heading"><a href="#Struktur-amp-Peta" class="headerlink" title="Struktur &amp; Peta"></a>Struktur &amp; Peta<a class="article-anchor" href="#Struktur-amp-Peta" aria-hidden="true"></a></h4><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Struktur</span></span><br><span class="line">db.Dimana(&amp;Pengguna&#123;Nama: <span class="string">"jinzhu"</span>, Umur: <span class="number">20</span>&#125;).Pertama(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI DIMANA nama pengguna = "jinzhu" DAN umur = 20 batas 1;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Peta</span></span><br><span class="line">db.Di mana(peta[<span class="keyword">string</span>]antarmuka&#123;&#125;&#123;<span class="string">"nama"</span>: <span class="string">"jinzhu"</span>, <span class="string">"umur"</span>: <span class="number">20</span>&#125;).Temukan(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI DIMANA nama pengguna = "jinzhu" DAN usia = 20;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Irisan kunci utama</span></span><br><span class="line">db.Dimana ([]<span class="keyword">int64</span>&#123;<span class="number">20</span>, <span class="number">21</span>, <span class="number">22</span>&#125;).Temukan(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI Di mana id pengguna DI (20, 21, 22);</span></span><br></pre></td></tr></table></figure>
+<p><strong>Perhatikan</strong>Ketika query dengan struct, GORM hanya akan query dengan bidang tersebut memiliki nilai non-nol, Itu berarti jika nilai bidang anda adalah <code>0</code>, <code>&#39;&#39;</code>,<code>Salah</code>atau lainnya<a href="https://tour.golang.org/basics/12" target="_blank" rel="noopener">nilai nol</a>,itu tidak akan digunakan untuk membangun kondisi query, sebagai contoh:</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Di mana (&amp;pengguna&#123;Nama: <span class="string">"jinzhu"</span>, Umur: <span class="number">0</span>&#125;).Temukan (&amp; pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI DI MANA nama pengguna = "jinzhu";</span></span><br></pre></td></tr></table></figure>
+<p>Anda bisa mempertimbangkan untuk menggunakan jenis pointer atau pemindai / penilai untuk menghindari hal ini.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Gunakan nilai petunjuk</span></span><br><span class="line">ketik Pengguna</span><br><span class="line"><span class="keyword">struct</span> &#123;</span><br><span class="line">   gorm. Model</span><br><span class="line">   Nama <span class="keyword">string</span></span><br><span class="line">   Umur * <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Gunakan pemindai/penilai</span></span><br><span class="line">ketik <span class="keyword">struct</span> pengguna&#123;</span><br><span class="line">   gorm.Model</span><br><span class="line">   Nama <span class="keyword">string</span></span><br><span class="line">   Umur sql.NullInt64</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Tidak" class="article-heading"><a href="#Tidak" class="headerlink" title="Tidak"></a>Tidak<a class="article-anchor" href="#Tidak" aria-hidden="true"></a></h3><p>Bekerja mirip seperti <code>Di mana</code></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Tidak(<span class="string">"nama"</span>, <span class="string">"jinzhu"</span>).Pertama(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI DI MANA nama pengguna &lt;&gt; "jinzhu" BATAS 1;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Tidak masuk</span></span><br><span class="line">db.Not (<span class="string">"nama"</span>, []<span class="keyword">string</span> &#123;<span class="string">"jinzhu"</span>, <span class="string">"jinzhu 2"</span>&#125;).Temukan(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI DI MANA nama pengguna tidak masuk ("jinzhu", "jinzhu 2");</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Tidak dalam irisan kunci utama</span></span><br><span class="line">db.Tidak ([]<span class="keyword">int64</span> &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;)Pertama(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI DI MANA id pengguna TIDAK DI (1,2,3);</span></span><br><span class="line"></span><br><span class="line">db.Tidak([]<span class="keyword">int64</span>&#123;&#125;).Pertama(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI pengguna;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// SQL Sederhana</span></span><br><span class="line">db.Tidak(<span class="string">"nama = ?"</span>, <span class="string">"jinzhu"</span>).pertama(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI DI MANA pengguna tidak (nama = "jinzhu");</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Struct</span></span><br><span class="line">db.tidak(pengguna&#123;Nama: <span class="string">"jinzhu"</span>&#125;).Pertama(&amp;pengguna)</span><br><span class="line"><span class="comment">//// PILIH * DARI DI MANA nama pengguna &lt;&gt; "jinzhu";</span></span><br></pre></td></tr></table></figure>
+<h3 id="Atau" class="article-heading"><a href="#Atau" class="headerlink" title="Atau"></a>Atau<a class="article-anchor" href="#Atau" aria-hidden="true"></a></h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Where(<span class="string">"role = ?"</span>, <span class="string">"admin"</span>).Or(<span class="string">"role = ?"</span>, <span class="string">"super_admin"</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE role = 'admin' OR role = 'super_admin';</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Struct</span></span><br><span class="line">db.Where(<span class="string">"name = 'jinzhu'"</span>).Or(User&#123;Name: <span class="string">"jinzhu 2"</span>&#125;).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'jinzhu' OR name = 'jinzhu 2';</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Map</span></span><br><span class="line">db.Where(<span class="string">"name = 'jinzhu'"</span>).Or(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>&#123;&#125;&#123;<span class="string">"name"</span>: <span class="string">"jinzhu 2"</span>&#125;).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'jinzhu' OR name = 'jinzhu 2';</span></span><br></pre></td></tr></table></figure>
+<h3 id="Kondisi-di-barisan" class="article-heading"><a href="#Kondisi-di-barisan" class="headerlink" title="Kondisi di barisan"></a>Kondisi di barisan<a class="article-anchor" href="#Kondisi-di-barisan" aria-hidden="true"></a></h3><p>Bekerja mirip seperti<code>Dimana</code>.</p>
+<p>When using with <a href="/docs/method_chaining.html#Multiple-Immediate-Methods">Multiple Immediate Methods</a>, won’t pass those conditions to later immediate methods.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Get by primary key (only works for integer primary key)</span></span><br><span class="line">db.First(&amp;user, <span class="number">23</span>)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE id = 23 LIMIT 1;</span></span><br><span class="line"><span class="comment">// Get by primary key if it were a non-integer type</span></span><br><span class="line">db.First(&amp;user, <span class="string">"id = ?"</span>, <span class="string">"string_primary_key"</span>)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE id = 'string_primary_key' LIMIT 1;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Plain SQL</span></span><br><span class="line">db.Find(&amp;user, <span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = "jinzhu";</span></span><br><span class="line"></span><br><span class="line">db.Find(&amp;users, <span class="string">"name &lt;&gt; ? AND age &gt; ?"</span>, <span class="string">"jinzhu"</span>, <span class="number">20</span>)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name &lt;&gt; "jinzhu" AND age &gt; 20;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Struct</span></span><br><span class="line">db.Find(&amp;users, User&#123;Age: <span class="number">20</span>&#125;)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE age = 20;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Map</span></span><br><span class="line">db.Find(&amp;users, <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>&#123;&#125;&#123;<span class="string">"age"</span>: <span class="number">20</span>&#125;)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE age = 20;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Pilihan-Pertanyaan-Tambahan" class="article-heading"><a href="#Pilihan-Pertanyaan-Tambahan" class="headerlink" title="Pilihan Pertanyaan Tambahan"></a>Pilihan Pertanyaan Tambahan<a class="article-anchor" href="#Pilihan-Pertanyaan-Tambahan" aria-hidden="true"></a></h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Add extra SQL option for selecting SQL</span></span><br><span class="line">db.Set(<span class="string">"gorm:query_option"</span>, <span class="string">"FOR UPDATE"</span>).First(&amp;user, <span class="number">10</span>)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE id = 10 FOR UPDATE;</span></span><br></pre></td></tr></table></figure>
+<h2 id="FirstOrInit" class="article-heading"><a href="#FirstOrInit" class="headerlink" title="FirstOrInit"></a>FirstOrInit<a class="article-anchor" href="#FirstOrInit" aria-hidden="true"></a></h2><p>Dapatkan catatan pertama yang cocok, atau inisialisasi yang baru dengan kondisi tertentu (hanya bekerja dengan struktur, kondisi peta)</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Unfound</span></span><br><span class="line">db.FirstOrInit(&amp;user, User&#123;Name: <span class="string">"non_existing"</span>&#125;)</span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Name: "non_existing"&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Found</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"Jinzhu"</span>&#125;).FirstOrInit(&amp;user)</span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 111, Name: "Jinzhu", Age: 20&#125;</span></span><br><span class="line">db.FirstOrInit(&amp;user, <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>&#123;&#125;&#123;<span class="string">"name"</span>: <span class="string">"jinzhu"</span>&#125;)</span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 111, Name: "Jinzhu", Age: 20&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Attrs" class="article-heading"><a href="#Attrs" class="headerlink" title="Attrs"></a>Attrs<a class="article-anchor" href="#Attrs" aria-hidden="true"></a></h3><p>Inisialisasi struktur dengan argumen jika catatan tidak ditemukan</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Unfound</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"non_existing"</span>&#125;).Attrs(User&#123;Age: <span class="number">20</span>&#125;).FirstOrInit(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM USERS WHERE name = 'non_existing';</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Name: "non_existing", Age: 20&#125;</span></span><br><span class="line"></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"non_existing"</span>&#125;).Attrs(<span class="string">"age"</span>, <span class="number">20</span>).FirstOrInit(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM USERS WHERE name = 'non_existing';</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Name: "non_existing", Age: 20&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Found</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"Jinzhu"</span>&#125;).Attrs(User&#123;Age: <span class="number">30</span>&#125;).FirstOrInit(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM USERS WHERE name = jinzhu';</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 111, Name: "Jinzhu", Age: 20&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Menetapkan" class="article-heading"><a href="#Menetapkan" class="headerlink" title="Menetapkan"></a>Menetapkan<a class="article-anchor" href="#Menetapkan" aria-hidden="true"></a></h3><p>Menetapkan argumen untuk struktur tanpa peduli itu ditemukan atau tidak</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Unfound</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"non_existing"</span>&#125;).Assign(User&#123;Age: <span class="number">20</span>&#125;).FirstOrInit(&amp;user)</span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Name: "non_existing", Age: 20&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Found</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"Jinzhu"</span>&#125;).Assign(User&#123;Age: <span class="number">30</span>&#125;).FirstOrInit(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM USERS WHERE name = jinzhu';</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 111, Name: "Jinzhu", Age: 30&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="FirstOrCreate" class="article-heading"><a href="#FirstOrCreate" class="headerlink" title="FirstOrCreate"></a>FirstOrCreate<a class="article-anchor" href="#FirstOrCreate" aria-hidden="true"></a></h2><p>Dapatkan catatan pertama yang cocok, atau membuat yang baru dengan kondisi tertentu (hanya bekerja dengan struktur, kondisi peta)</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Unfound</span></span><br><span class="line">db.FirstOrCreate(&amp;user, User&#123;Name: <span class="string">"non_existing"</span>&#125;)</span><br><span class="line"><span class="comment">//// INSERT INTO "users" (name) VALUES ("non_existing");</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 112, Name: "non_existing"&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Found</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"Jinzhu"</span>&#125;).FirstOrCreate(&amp;user)</span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 111, Name: "Jinzhu"&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Attrs-1" class="article-heading"><a href="#Attrs-1" class="headerlink" title="Attrs"></a>Attrs<a class="article-anchor" href="#Attrs-1" aria-hidden="true"></a></h3><p>Menetapkan struktur dengan argumen jika catatan tidak ditemukan dan buat dengan nilai-nilai tersebut</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Unfound</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"non_existing"</span>&#125;).Attrs(User&#123;Age: <span class="number">20</span>&#125;).FirstOrCreate(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'non_existing';</span></span><br><span class="line"><span class="comment">//// INSERT INTO "users" (name, age) VALUES ("non_existing", 20);</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 112, Name: "non_existing", Age: 20&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Found</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"jinzhu"</span>&#125;).Attrs(User&#123;Age: <span class="number">30</span>&#125;).FirstOrCreate(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'jinzhu';</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 111, Name: "jinzhu", Age: 20&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Assign" class="article-heading"><a href="#Assign" class="headerlink" title="Assign"></a>Assign<a class="article-anchor" href="#Assign" aria-hidden="true"></a></h3><p>Menetapkannya untuk mencatat tanpa peduli itu ditemukan atau tidak, dan simpan kembali ke basisdata.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Unfound</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"non_existing"</span>&#125;).Assign(User&#123;Age: <span class="number">20</span>&#125;).FirstOrCreate(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'non_existing';</span></span><br><span class="line"><span class="comment">//// INSERT INTO "users" (name, age) VALUES ("non_existing", 20);</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 112, Name: "non_existing", Age: 20&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Found</span></span><br><span class="line">db.Where(User&#123;Name: <span class="string">"jinzhu"</span>&#125;).Assign(User&#123;Age: <span class="number">30</span>&#125;).FirstOrCreate(&amp;user)</span><br><span class="line"><span class="comment">//// SELECT * FROM users WHERE name = 'jinzhu';</span></span><br><span class="line"><span class="comment">//// UPDATE users SET age=30 WHERE id = 111;</span></span><br><span class="line"><span class="comment">//// user -&gt; User&#123;Id: 111, Name: "jinzhu", Age: 30&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Pertanyaan-Lanjutan" class="article-heading"><a href="#Pertanyaan-Lanjutan" class="headerlink" title="Pertanyaan Lanjutan"></a>Pertanyaan Lanjutan<a class="article-anchor" href="#Pertanyaan-Lanjutan" aria-hidden="true"></a></h2><h3 id="SubQuery" class="article-heading"><a href="#SubQuery" class="headerlink" title="SubQuery"></a>SubQuery<a class="article-anchor" href="#SubQuery" aria-hidden="true"></a></h3><p>SubQuery with <code>*gorm.expr</code></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Where(<span class="string">"amount &gt; ?"</span>, DB.Table(<span class="string">"orders"</span>).Select(<span class="string">"AVG(amount)"</span>).Where(<span class="string">"state = ?"</span>, <span class="string">"paid"</span>).QueryExpr()).Find(&amp;orders)</span><br><span class="line"><span class="comment">// SELECT * FROM "orders"  WHERE "orders"."deleted_at" IS NULL AND (amount &gt; (SELECT AVG(amount) FROM "orders"  WHERE (state = 'paid')));</span></span><br></pre></td></tr></table></figure>
+<h3 id="Pilih" class="article-heading"><a href="#Pilih" class="headerlink" title="Pilih"></a>Pilih<a class="article-anchor" href="#Pilih" aria-hidden="true"></a></h3><p>Tentukan bidang yang ingin anda ambil kembali dari basisdata, secara default, akan memilih semua bidang</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Select(<span class="string">"name, age"</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT name, age FROM users;</span></span><br><span class="line"></span><br><span class="line">db.Select([]<span class="keyword">string</span>&#123;<span class="string">"name"</span>, <span class="string">"age"</span>&#125;).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT name, age FROM users;</span></span><br><span class="line"></span><br><span class="line">db.Table(<span class="string">"users"</span>).Select(<span class="string">"COALESCE(age,?)"</span>, <span class="number">42</span>).Rows()</span><br><span class="line"><span class="comment">//// SELECT COALESCE(age,'42') FROM users;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Urutan" class="article-heading"><a href="#Urutan" class="headerlink" title="Urutan"></a>Urutan<a class="article-anchor" href="#Urutan" aria-hidden="true"></a></h3><p>Tentukan urutan ketika mengambil catatan dari basisdata, menetapkan urutan ulang (argumen kedua) ke <code>benar</code> untuk menimpa kondisi yang didefinisikan</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Order(<span class="string">"age desc, name"</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users ORDER BY age desc, name;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Multiple orders</span></span><br><span class="line">db.Order(<span class="string">"age desc"</span>).Order(<span class="string">"name"</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users ORDER BY age desc, name;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ReOrder</span></span><br><span class="line">db.Order(<span class="string">"age desc"</span>).Find(&amp;users1).Order(<span class="string">"age"</span>, <span class="literal">true</span>).Find(&amp;users2)</span><br><span class="line"><span class="comment">//// SELECT * FROM users ORDER BY age desc; (users1)</span></span><br><span class="line"><span class="comment">//// SELECT * FROM users ORDER BY age; (users2)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Batas" class="article-heading"><a href="#Batas" class="headerlink" title="Batas"></a>Batas<a class="article-anchor" href="#Batas" aria-hidden="true"></a></h3><p>Tentukan jumlah maksimum dari catatan untuk mengambil kembali</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Limit(<span class="number">3</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users LIMIT 3;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Cancel limit condition with -1</span></span><br><span class="line">db.Limit(<span class="number">10</span>).Find(&amp;users1).Limit(<span class="number">-1</span>).Find(&amp;users2)</span><br><span class="line"><span class="comment">//// SELECT * FROM users LIMIT 10; (users1)</span></span><br><span class="line"><span class="comment">//// SELECT * FROM users; (users2)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Offset" class="article-heading"><a href="#Offset" class="headerlink" title="Offset"></a>Offset<a class="article-anchor" href="#Offset" aria-hidden="true"></a></h3><p>Tentukan jumlah dari catatan untuk melewati sebelum memulai untuk mengembalikan catatan</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Offset(<span class="number">3</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">//// SELECT * FROM users OFFSET 3;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Cancel offset condition with -1</span></span><br><span class="line">db.Offset(<span class="number">10</span>).Find(&amp;users1).Offset(<span class="number">-1</span>).Find(&amp;users2)</span><br><span class="line"><span class="comment">//// SELECT * FROM users OFFSET 10; (users1)</span></span><br><span class="line"><span class="comment">//// SELECT * FROM users; (users2)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Hitungan" class="article-heading"><a href="#Hitungan" class="headerlink" title="Hitungan"></a>Hitungan<a class="article-anchor" href="#Hitungan" aria-hidden="true"></a></h3><p>Dapatkan seberapa banyak catatan untuk sebuah model</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">db.Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Or(<span class="string">"name = ?"</span>, <span class="string">"jinzhu 2"</span>).Find(&amp;users).Count(&amp;count)</span><br><span class="line"><span class="comment">//// SELECT * from USERS WHERE name = 'jinzhu' OR name = 'jinzhu 2'; (users)</span></span><br><span class="line"><span class="comment">//// SELECT count(*) FROM users WHERE name = 'jinzhu' OR name = 'jinzhu 2'; (count)</span></span><br><span class="line"></span><br><span class="line">db.Model(&amp;User&#123;&#125;).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Count(&amp;count)</span><br><span class="line"><span class="comment">//// SELECT count(*) FROM users WHERE name = 'jinzhu'; (count)</span></span><br><span class="line"></span><br><span class="line">db.Table(<span class="string">"deleted_users"</span>).Count(&amp;count)</span><br><span class="line"><span class="comment">//// SELECT count(*) FROM deleted_users;</span></span><br><span class="line"></span><br><span class="line">db.Table(<span class="string">"deleted_users"</span>).Select(<span class="string">"count(distinct(name))"</span>).Count(&amp;count())</span><br><span class="line"><span class="comment">//// SELECT count( distinct(name) ) FROM deleted_users;</span></span><br></pre></td></tr></table></figure>
+<p><strong>NOTE</strong> When use <code>Count</code> in a query chain, it has to be the last one, as it will overwrite <code>SELECT</code> columns, But using the <code>count</code> keyword does not</p>
+<h3 id="Kelompok-amp-Memiliki" class="article-heading"><a href="#Kelompok-amp-Memiliki" class="headerlink" title="Kelompok &amp; Memiliki"></a>Kelompok &amp; Memiliki<a class="article-anchor" href="#Kelompok-amp-Memiliki" aria-hidden="true"></a></h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">rows, err := db.Table(<span class="string">"orders"</span>).Select(<span class="string">"date(created_at) as date, sum(amount) as total"</span>).Group(<span class="string">"date(created_at)"</span>).Rows()</span><br><span class="line"><span class="keyword">for</span> rows.Next() &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">rows, err := db.Table(<span class="string">"orders"</span>).Select(<span class="string">"date(created_at) as date, sum(amount) as total"</span>).Group(<span class="string">"date(created_at)"</span>).Having(<span class="string">"sum(amount) &gt; ?"</span>, <span class="number">100</span>).Rows()</span><br><span class="line"><span class="keyword">for</span> rows.Next() &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Result <span class="keyword">struct</span> &#123;</span><br><span class="line">    Date  time.Time</span><br><span class="line">    Total <span class="keyword">int64</span></span><br><span class="line">&#125;</span><br><span class="line">db.Table(<span class="string">"orders"</span>).Select(<span class="string">"date(created_at) as date, sum(amount) as total"</span>).Group(<span class="string">"date(created_at)"</span>).Having(<span class="string">"sum(amount) &gt; ?"</span>, <span class="number">100</span>).Scan(&amp;results)</span><br></pre></td></tr></table></figure>
+<h3 id="Gabung" class="article-heading"><a href="#Gabung" class="headerlink" title="Gabung"></a>Gabung<a class="article-anchor" href="#Gabung" aria-hidden="true"></a></h3><p>Specify Joins conditions</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">rows, err := db.Table(<span class="string">"users"</span>).Select(<span class="string">"users.name, emails.email"</span>).Joins(<span class="string">"left join emails on emails.user_id = users.id"</span>).Rows()</span><br><span class="line"><span class="keyword">for</span> rows.Next() &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">db.Table(<span class="string">"users"</span>).Select(<span class="string">"users.name, emails.email"</span>).Joins(<span class="string">"left join emails on emails.user_id = users.id"</span>).Scan(&amp;results)</span><br><span class="line"></span><br><span class="line"><span class="comment">// multiple joins with parameter</span></span><br><span class="line">db.Joins(<span class="string">"JOIN emails ON emails.user_id = users.id AND emails.email = ?"</span>, <span class="string">"jinzhu@example.org"</span>).Joins(<span class="string">"JOIN credit_cards ON credit_cards.user_id = users.id"</span>).Where(<span class="string">"credit_cards.number = ?"</span>, <span class="string">"411111111111"</span>).Find(&amp;user)</span><br></pre></td></tr></table></figure>
+<h2 id="Pluck" class="article-heading"><a href="#Pluck" class="headerlink" title="Pluck"></a>Pluck<a class="article-anchor" href="#Pluck" aria-hidden="true"></a></h2><p>Permintaan kolom tunggal dari sebuah model sebagai peta, jika anda ingin permintaan kolom ganda, anda harus menggunakan <a href="#Scan"><code>Pindai</code></a> sebagai gantinya</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ages []<span class="keyword">int64</span></span><br><span class="line">db.Find(&amp;users).Pluck(<span class="string">"age"</span>, &amp;ages)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> names []<span class="keyword">string</span></span><br><span class="line">db.Model(&amp;User&#123;&#125;).Pluck(<span class="string">"name"</span>, &amp;names)</span><br><span class="line"></span><br><span class="line">db.Table(<span class="string">"deleted_users"</span>).Pluck(<span class="string">"name"</span>, &amp;names)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting more than one column? Do it like this:</span></span><br><span class="line">db.Select(<span class="string">"name, age"</span>).Find(&amp;users)</span><br></pre></td></tr></table></figure>
+<h2 id="Pindai" class="article-heading"><a href="#Pindai" class="headerlink" title="Pindai"></a>Pindai<a class="article-anchor" href="#Pindai" aria-hidden="true"></a></h2><p>Pindai hasil ke dalam struktur lain.</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Result <span class="keyword">struct</span> &#123;</span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">    Age  <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result Result</span><br><span class="line">db.Table(<span class="string">"users"</span>).Select(<span class="string">"name, age"</span>).Where(<span class="string">"name = ?"</span>, <span class="number">3</span>).Scan(&amp;result)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Raw SQL</span></span><br><span class="line">db.Raw(<span class="string">"SELECT name, age FROM users WHERE name = ?"</span>, <span class="number">3</span>).Scan(&amp;result)</span><br></pre></td></tr></table></figure>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-07T06:22:36.084Z" itemprop="dateModified">Terakhir diperbarui: 2019-11-07</time>
+<a href="create.html" class="article-footer-prev" title="Buat"><i class="fa fa-chevron-left"></i><span>Sebelumnya</span></a><a href="update.html" class="article-footer-next" title="Perbarui"><span>Selanjutnya</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+<div id="disqus_thread"></div>
+
+
+<script>
+var disqus_config = function () {
+this.page.url = 'http://gorm.io/id_ID/docs/query.html';
+this.page.identifier = 'http://gorm.io/id_ID/docs/query.html';
+this.language = 'id';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gorm.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+</section>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
+              <strong class="sidebar-title">Konten</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Pertanyaan"><span class="toc-text">Pertanyaan</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dimana"><span class="toc-text">Dimana</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL-biasa"><span class="toc-text">SQL biasa</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Struktur-amp-Peta"><span class="toc-text">Struktur &amp; Peta</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tidak"><span class="toc-text">Tidak</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Atau"><span class="toc-text">Atau</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kondisi-di-barisan"><span class="toc-text">Kondisi di barisan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pilihan-Pertanyaan-Tambahan"><span class="toc-text">Pilihan Pertanyaan Tambahan</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FirstOrInit"><span class="toc-text">FirstOrInit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Attrs"><span class="toc-text">Attrs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Menetapkan"><span class="toc-text">Menetapkan</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FirstOrCreate"><span class="toc-text">FirstOrCreate</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Attrs-1"><span class="toc-text">Attrs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assign"><span class="toc-text">Assign</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pertanyaan-Lanjutan"><span class="toc-text">Pertanyaan Lanjutan</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SubQuery"><span class="toc-text">SubQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pilih"><span class="toc-text">Pilih</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Urutan"><span class="toc-text">Urutan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Batas"><span class="toc-text">Batas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Offset"><span class="toc-text">Offset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hitungan"><span class="toc-text">Hitungan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kelompok-amp-Memiliki"><span class="toc-text">Kelompok &amp; Memiliki</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gabung"><span class="toc-text">Gabung</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pluck"><span class="toc-text">Pluck</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pindai"><span class="toc-text">Pindai</span></a></li></ol>
+              <a href="#" id="article-toc-top">Kembali ke Atas</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Memulai</strong><a href="index.html" class="sidebar-link">Ikhtisar</a><a href="models.html" class="sidebar-link">Mendeklarasikan Model</a><a href="conventions.html" class="sidebar-link">Konvensi</a><a href="connecting_to_the_database.html" class="sidebar-link">Menghubungkan ke Basis Data</a><strong class="sidebar-title">Antarmuka CRUD</strong><a href="create.html" class="sidebar-link">Buat</a><a href="query.html" class="sidebar-link current">Kueri</a><a href="update.html" class="sidebar-link">Perbarui</a><a href="delete.html" class="sidebar-link">Hapus</a><strong class="sidebar-title">Asosiasi</strong><a href="belongs_to.html" class="sidebar-link">Milik</a><a href="has_one.html" class="sidebar-link">Memiliki satu</a><a href="has_many.html" class="sidebar-link">Memiliki banyak</a><a href="many_to_many.html" class="sidebar-link">Banyak ke banyak</a><a href="associations.html" class="sidebar-link">Asosiasi</a><a href="preload.html" class="sidebar-link">Pramuat (Loading Eager)</a><strong class="sidebar-title">Tutorial</strong><a href="method_chaining.html" class="sidebar-link">Metode Rantai</a><a href="error_handling.html" class="sidebar-link">Penanganan Kesalahan</a><a href="hooks.html" class="sidebar-link">Kaitan</a><a href="transactions.html" class="sidebar-link">Transaksi</a><a href="migration.html" class="sidebar-link">Migrasi</a><a href="sql_builder.html" class="sidebar-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Antarmuka Database Generik</a><strong class="sidebar-title">Topik Lanjutan</strong><a href="composite_primary_key.html" class="sidebar-link">Kunci Utama Komposit</a><a href="write_plugins.html" class="sidebar-link">Tulis Plugin</a><a href="dialects.html" class="sidebar-link">GORM Dialects</a><a href="logger.html" class="sidebar-link">Logger</a><a href="changelog.html" class="sidebar-link">ChangeLog</a><a href="/community.html" class="sidebar-link">Komunitas</a><a href="/contribute.html" class="sidebar-link">Menyumbangkan</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Terjemahkan situs yang sekarang</a>
+  </div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2013~2019 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
+      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Home</a>
+      </li>
+      <a href="/id_ID/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Docs</a><a href="/id_ID/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>Community</a><a href="https://godoc.org/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/id_ID/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
+    </ul>
+    
+      <strong class="mobile-nav-title">Memulai</strong><a href="index.html" class="mobile-nav-link">Ikhtisar</a><a href="models.html" class="mobile-nav-link">Mendeklarasikan Model</a><a href="conventions.html" class="mobile-nav-link">Konvensi</a><a href="connecting_to_the_database.html" class="mobile-nav-link">Menghubungkan ke Basis Data</a><strong class="mobile-nav-title">Antarmuka CRUD</strong><a href="create.html" class="mobile-nav-link">Buat</a><a href="query.html" class="mobile-nav-link current">Kueri</a><a href="update.html" class="mobile-nav-link">Perbarui</a><a href="delete.html" class="mobile-nav-link">Hapus</a><strong class="mobile-nav-title">Asosiasi</strong><a href="belongs_to.html" class="mobile-nav-link">Milik</a><a href="has_one.html" class="mobile-nav-link">Memiliki satu</a><a href="has_many.html" class="mobile-nav-link">Memiliki banyak</a><a href="many_to_many.html" class="mobile-nav-link">Banyak ke banyak</a><a href="associations.html" class="mobile-nav-link">Asosiasi</a><a href="preload.html" class="mobile-nav-link">Pramuat (Loading Eager)</a><strong class="mobile-nav-title">Tutorial</strong><a href="method_chaining.html" class="mobile-nav-link">Metode Rantai</a><a href="error_handling.html" class="mobile-nav-link">Penanganan Kesalahan</a><a href="hooks.html" class="mobile-nav-link">Kaitan</a><a href="transactions.html" class="mobile-nav-link">Transaksi</a><a href="migration.html" class="mobile-nav-link">Migrasi</a><a href="sql_builder.html" class="mobile-nav-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="mobile-nav-link">Antarmuka Database Generik</a><strong class="mobile-nav-title">Topik Lanjutan</strong><a href="composite_primary_key.html" class="mobile-nav-link">Kunci Utama Komposit</a><a href="write_plugins.html" class="mobile-nav-link">Tulis Plugin</a><a href="dialects.html" class="mobile-nav-link">GORM Dialects</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="changelog.html" class="mobile-nav-link">ChangeLog</a><a href="/community.html" class="mobile-nav-link">Komunitas</a><a href="/contribute.html" class="mobile-nav-link">Menyumbangkan</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">Terjemahkan situs yang sekarang</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>bahasa Indonesia</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/query.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh_CN">简体中文</option>
+      
+        <option value="de_DE">Deutsch</option>
+      
+        <option value="es_ES">Español</option>
+      
+        <option value="id_ID" selected>bahasa Indonesia</option>
+      
+        <option value="it_IT">Italiano</option>
+      
+        <option value="ja_JP">日本語</option>
+      
+        <option value="ru_RU">Русский</option>
+      
+        <option value="fr_FR">French</option>
+      
+        <option value="pt_BR">Brazilian Portuguese</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="/js/code_expander.js"></script>
+<script src="/js/404_fix.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSNPD75" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+</html>
